@@ -1,0 +1,60 @@
+.symbolElement, .nameElement, .numberElement {
+    font-weight: 900;
+
+}
+
+.element {
+    display: grid;
+    grid-template-columns: 50px 50px ;
+    grid-template-rows: 30px 30px ;
+    background-color: #F08080;
+    width: 105px; 
+    
+
+
+}
+
+.symbolElement {
+    display: flex;
+    grid-column: 1 /2;
+
+
+
+}
+
+.numberElement {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+}
+
+.weElement{
+    grid-column: 2 / 2;
+
+}
+
+.nameElement {
+    grid-column: 1 / 2;
+    
+}
+
+.anySymbol, .anyName, .anyNumber {
+    font-weight: 900;
+
+}
+.sector {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: #F08080;
+}
+.anyNumber {
+
+    justify-content: right;
+}
+
+
+
+
+
