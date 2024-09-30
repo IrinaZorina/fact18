@@ -1,3 +1,13 @@
+<?php
+$hour = date('H');
+
+$style = 'assets/css/style_night.css';
+
+if ($hour > 8 && $hour < 22) {
+    $style = 'assets/css/style.css';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -5,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Страница для курса по 1C-Битрикс">
     <title>Александр Торопов</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?=$style;?>">
 </head>
 <body>
     <header class="wrapper main_header border">
@@ -26,10 +36,12 @@
                 <div class="content_item">
                     <p>Пишу разный <a href="https://github.com/aletoropov" target="_blank" title="Мой GitHub">код</a> на PHP и JavaScript, использую Linux Mint, делаю буклеты в Abode InDesign.</p>
                     <p>Люблю уехать в закат на велосипеде &#128690;</p>
+                    <p>Люблю создавать цифровые продукты, которые приносят пользу людям &#128187;</p>
                     <p>Могу управлять скоростным поездом &#128646;</p>
                 </div>
                 <div class="content_item">
                     <p>Все понравилось, думаю это будет увлекательное приключение в мир кодинга и 1C Bitrix.</p>
+                    <p>Надеюсь успешно справиться со всеми испытаниями и стать сертифицированным 1C Bitrix разработчиком.</p>
                 </div>
             </div>
         </main>
@@ -39,19 +51,19 @@
         <ul class="attractions_small">
             <li class="attractions_item">
                 <img class="attractions_image" src="assets/images/attractions1.jpg" alt="Бобровый лог">
-                <p>Бобровый лог</p>
+                <h3>Бобровый лог</h3>
             </li>
             <li class="attractions_item">
                 <img class="attractions_image" src="assets/images/attr_small1.jpg" alt="Пещера Большая Орешная">
-                <p>Пещера Большая Орешная</p>
+                <h3>Пещера Большая Орешная</h3>
             </li>
             <li class="attractions_item">
                 <img class="attractions_image" src="assets/images/attr_small2.jpg" alt="Национальный парк Столбы">
-                <p>Национальный парк "Столбы"</p>
+                <h3>Национальный парк "Столбы"</h3>
             </li>
             <li class="attractions_item">
                 <img class="attractions_image" src="assets/images/attr_small3.jpg" alt="ГЭС">
-                <p>ГЭС</p>
+                <h3>ГЭС</h3>
             </li>
         </ul>
     </section>
@@ -60,19 +72,19 @@
         <ul class="attractions_big">
             <li class="attractions_item">
                 <img class="attractions_image" src="assets/images/attractions1.jpg" alt="Красивый мост">
-                <p>Часовня</p>
+                <h3>Часовня</h3>
             </li>
             <li class="attractions_item">
                 <img class="attractions_image" src="assets/images/attractions2.jpg" alt="Дои и река">
-                <p>Река</p>
+                <h3>Река</h3>
             </li>
             <li class="attractions_item">
                 <img class="attractions_image" src="assets/images/attractions2.jpg" alt="Дои и река">
-                <p>Дома</p>
+                <h3>Дома</h3>
             </li>
             <li class="attractions_item">
                 <img class="attractions_image" src="assets/images/attractions1.jpg" alt="Красивый мост">
-                <p>Набережная</p>
+                <h3>Набережная</h3>
             </li>
         </ul>
     </section>
