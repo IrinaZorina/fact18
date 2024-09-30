@@ -14,7 +14,7 @@ body {
 
 .border {
     border: 5px solid #fff; 
-    box-shadow: 2px 1px 5px #999999; 
+    box-shadow: 0 0 5px #999999;
     border-radius: 10px;
 }
 
