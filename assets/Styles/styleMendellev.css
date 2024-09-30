@@ -1,0 +1,12 @@
+.mendeleev {
+display: flex;
+
+}
+p {
+    text-align: right;
+    vertical-align: middle;
+}
+.mendeleev2 {
+    background-color: brown;
+    width: 200px;
+}
