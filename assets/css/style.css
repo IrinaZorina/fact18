@@ -1,11 +1,26 @@
-<?php echo body {
-	background-color: ' . $backgroundColor . ';
-}
-? > .hd {
+
+.hd {
 	height: 50px;
 	width: 100%;
-	background-color: rgb(74, 74, 74);
+	background-color: rgb(140, 140, 140);
+	}
+.links {
+	text-align: center;
+	font-size: 30px;
+}     
+
+.ft {
+	height: 50px;
+	width: 100%;
+	background-color: rgb(140, 140, 140);
+	font-size: 20px;
+	background-size: cover;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
 }
+
 
 .container {
 	display: grid;

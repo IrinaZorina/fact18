@@ -10,7 +10,7 @@ echo '<style>
 body {
   background-color: ' . $backgroundColor . ';
 }</style>';
-
+include 'header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,11 +22,6 @@ body {
 		<link rel="stylesheet" href="../assets/css/style.css" />
 	</head>
 	<body>
-	
-		<header>
-			<div class="hd"></div>
-		</header>
-
 		<div class="container">
 			<div class="one"></div>
 			<div class="name">
@@ -111,5 +106,7 @@ body {
 		</div>
 	</body>
 </html>
-
+<?php
+include 'footer.php';
+?>
 
