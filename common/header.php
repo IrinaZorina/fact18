@@ -19,7 +19,7 @@ if ($hour > 8 && $hour < 22) {
 </head>
 <body>
 <header class="wrapper main_header border">
-    <a href="index.html">
+    <a href="index.php">
         <img src="assets/images/logo.svg" alt="Логотип Факт.Академия">
     </a>
     <nav>
