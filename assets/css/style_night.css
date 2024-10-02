@@ -12,6 +12,10 @@ body {
     margin: 20px auto;
 }
 
+.nav_item {
+    padding-left: 5px;
+}
+
 .border {
     border: 5px solid #3d3c3c;
     box-shadow:0 0 5px #17f104;

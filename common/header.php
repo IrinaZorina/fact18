@@ -23,6 +23,7 @@ if ($hour > 8 && $hour < 22) {
         <img src="assets/images/logo.svg" alt="Логотип Факт.Академия">
     </a>
     <nav>
-        <a href="mendeleev.php">Таблица Менделеева</a>
+        <a class="nav_item" href="mendeleev.php">Менделеев</a>
+        <a class="nav_item" href="loop.php">Циклы</a>
     </nav>
 </header>
