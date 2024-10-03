@@ -204,31 +204,7 @@ do {
 
 <br><br>
 
-<?php 
-$i = "9";
-if ($i == 0) {
-    echo "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10";
-} elseif ($i == 1) {
-    echo "0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
-} elseif ($i == 2) {
-    echo "0, 1, 2, 3, 4, 5, 6, 7, 8";
-} elseif ($i == 3) {
-    echo "0, 1, 2, 3, 4, 5, 6, 7";
-} elseif ($i == 4) {
-    echo "0, 1, 2, 3, 4, 5, 6";
-} elseif ($i == 5) {
-    echo "0, 1, 2, 3, 4, 5";
-} elseif ($i == 6) {
-    echo "0, 1, 2, 3, 4";
-} elseif ($i == 7) {
-    echo "0, 1, 2, 3";
-} elseif ($i == 8) {
-    echo "0, 1, 2";
-} elseif ($i == 9) {
-    echo "0, 1";
-} elseif ($i == 10) {
-    echo "0";
-}
+<?php
 $i = 5;
 for ($n = 0; $n <= (10 - $i); $n++) {
     echo "$n<br>";
