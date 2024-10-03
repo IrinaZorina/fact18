@@ -1,4 +1,5 @@
 <?php
+include 'header.php';
 $time = date('H'); // получаем время
 if ($time >= 8 && $time <= 17) {
     $backgroundColor = '#fff'; // Белый цвет
@@ -10,10 +11,10 @@ echo '<style>
 body {
   background-color: ' . $backgroundColor . ';
 }</style>';
-include 'header.php';
+
 ?>
 
-	<body>
+	
 		<div class="container">
 			<div class="one"></div>
 			<div class="name">
@@ -96,10 +97,10 @@ include 'header.php';
 				</div>
 			</div>
 		</div>
-	</body>
+	
 <?php
 include 'footer.php';
 ?>
-</html>
+
 
 
