@@ -16,6 +16,7 @@ if ($hour > 8 && $hour < 22) {
     <meta name="description" content="Страница для курса по 1C-Битрикс">
     <title>Александр Торопов</title>
     <link rel="stylesheet" href="<?=$style;?>">
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="assets/css/mendeleev.css">
 </head>
 <body>
@@ -28,3 +29,15 @@ if ($hour > 8 && $hour < 22) {
         <a class="nav_item" href="loop.php">Циклы</a>
     </nav>
 </header>
+=======
+</head>
+<body>
+<header class="wrapper main_header border">
+    <a href="index.html">
+        <img src="assets/images/logo.svg" alt="Логотип Факт.Академия">
+    </a>
+    <nav>
+        <a href="mendeleev.php">Таблица Менделеева</a>
+    </nav>
+</header>
+>>>>>>> Stashed changes
