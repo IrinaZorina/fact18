@@ -16,6 +16,7 @@ if ($hour > 8 && $hour < 22) {
     <meta name="description" content="Страница для курса по 1C-Битрикс">
     <title>Александр Торопов</title>
     <link rel="stylesheet" href="<?=$style;?>">
+    <link rel="stylesheet" href="assets/css/mendeleev.css">
 </head>
 <body>
 <header class="wrapper main_header border">
