@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/Styles/styles.css.php">
+    <link rel="stylesheet" type="text/css" href="assets/Styles/styles.css">
     <title>Document</title>
 </head>
 <?php
-    $time=22;
-    $color="blue";
-    $background_color="red";
-    ?>
-   
-<body>
-   <header>
-    <a href="mendeleev.html"><img class="logo" src="assets/images/загрузка.jfif"></a>
-    </header>
+$time = date("H");
+$background_color = "blue";
+if($time>20 && $time<8) $background_color;
+else  $background_color="yellow";
+include "header.html";
+?>
+<style type="text/css">
+  body {
+    background-color: <?php echo $background_color?>;
+  }
+</style>
     <main>
         <section>
             <img class="photo" src="assets/images/efb2a807-0c89-40e9-a274-d6dbd9805a47.jfif">
@@ -69,7 +71,8 @@
           <img src="assets/images/vlad.jpg" alt=""><p class="text">текст</p>
       </div>
     </section>
-
-
+<?php
+include "footer.html";
+?>
 </body>
 </html>
