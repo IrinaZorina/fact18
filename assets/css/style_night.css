@@ -96,6 +96,16 @@ body {
     text-align: center;
 }
 
+.icon_footer {
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+.icon_footer:hover,
+.icon_footer:focus {
+    opacity: 0.6;
+}
+
 .heart {
     color: #ec0606;
 }
