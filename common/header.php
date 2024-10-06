@@ -26,5 +26,6 @@ if ($hour > 8 && $hour < 22) {
     <nav>
         <a class="nav_item" href="mendeleev.php">Менделеев</a>
         <a class="nav_item" href="loop.php">Циклы</a>
+        <a class="nav_item" href="array.php">Массивы</a>
     </nav>
 </header>
