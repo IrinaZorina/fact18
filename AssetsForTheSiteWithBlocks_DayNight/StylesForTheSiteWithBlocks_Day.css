@@ -1,6 +1,6 @@
 .Header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     font-family: 'Roboto', Arial, sans-serif;
     background-color: lightslategray;
     text-align: center;
