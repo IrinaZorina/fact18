@@ -3,11 +3,18 @@
 	height: 50px;
 	width: 100%;
 	background-color: rgb(140, 140, 140);
-	}
-.links {
+}
+
+.links, .links2 {
 	text-align: center;
 	font-size: 30px;
-}     
+}
+   
+.la {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 
 .ft {
 	height: 50px;

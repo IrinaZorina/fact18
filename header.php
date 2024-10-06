@@ -8,7 +8,10 @@
 </head>
 <body>
   <header>
-			<div class="hd">
+		<div class="hd">
+      <div class="la">    
 				<div class="links"><a href="/tasks.php">Циклы</a></div>
-			</div>
+        <div class="links2"><a href="/arrays.php">Массивы</a></div>
+      </div>
+		</div>
 				</header>
