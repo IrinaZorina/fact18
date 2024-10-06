@@ -166,12 +166,35 @@
                             }
                         }
                     }
-                    echo 'Средняя оценка по <b>Математике:</b> ' . $math / $group_count . '<br>';
-                    echo 'Средняя оценка по <b>Физике:</b> ' . $physical / $group_count . '<br>';
-                    echo 'Средняя оценка по <b>Химии</b>: ' . $hemical / $group_count . '<br>';
-                    echo 'Средняя оценка по <b>Информатике:</b> ' . $it / $group_count . '<br>';
                     ?>
                 </p>
+                <table>
+                    <tr>
+                        <th>Предмет</th>
+                        <th>Сумма оценок</th>
+                        <th>Средняя оценка</th>
+                    </tr>
+                    <tr>
+                        <td>Математика</td>
+                        <td><?=$math?></td>
+                        <td><?=$math / $group_count?></td>
+                    </tr>
+                    <tr>
+                        <td>Физика</td>
+                        <td><?=$physical?></td>
+                        <td><?=$physical / $group_count?></td>
+                    </tr>
+                    <tr>
+                        <td>Химия</td>
+                        <td><?=$hemical?></td>
+                        <td><?=$hemical / $group_count?></td>
+                    </tr>
+                    <tr>
+                        <td>Информатика</td>
+                        <td><?=$it?></td>
+                        <td><?=$it / $group_count?></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </main>
