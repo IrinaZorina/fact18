@@ -52,5 +52,25 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №3 (Слайд 15)</p>
+                <p>Создать массив, заполненный названиями картинок, например, 1.png.
+                    Необходимо случайным образом выбирать название картинки из массива и выводить ее на экран.</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $images = [
+                            'assets/images/arrays/1.png',
+                            'assets/images/arrays/2.png',
+                            'assets/images/arrays/3.webp',
+                    ];
+                    $image = rand(0, count($images) - 1);
+                    ?>
+                    <img src="<?=$images[$image]?>" alt="Auid">
+                </p>
+            </div>
+        </div>
     </main>
 </section>
