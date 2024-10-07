@@ -70,10 +70,23 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
 ul {
-    list-style-type: none;
-    display: flex;
+    list-style: none;
     font-size: 30px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.menu {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 
