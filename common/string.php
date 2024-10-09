@@ -70,5 +70,31 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №5 слайд 22</p>
+                <p>Дана строка. Проверьте, что она заканчивается на '.png'.
+                   Если это так, выведите 'да', если не так - 'нет'..</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $str = "picture.png";
+                    if (substr_compare($str, '.png', -4) === 0) {
+                        echo 'Да<br>';
+                    } else {
+                        echo 'Нет<br>';
+                    }
+                    $str = "picture.jpg";
+                    if (substr_compare($str, '.png', -4) === 0) {
+                        echo 'Да<br>';
+                    } else {
+                        echo 'Нет<br>';
+                    }
+                    unset($str);
+                    ?>
+                </p>
+            </div>
+        </div>
     </main>
 </section>
