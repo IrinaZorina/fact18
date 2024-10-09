@@ -50,5 +50,25 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №4 слайд 22</p>
+                <p>Дана строка ‘html css php'.
+                   Вырежьте из нее и выведите на экран слово 'html', слово 'css' и слово 'php'.</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $str = 'html css php';
+                    $words = explode(' ', $str);
+
+                    foreach ($words as $word) {
+                        echo "<p>{$word}</p>";
+                    }
+                    unset($str, $words);
+                    ?>
+                </p>
+            </div>
+        </div>
     </main>
 </section>
