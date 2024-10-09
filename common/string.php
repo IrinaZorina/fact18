@@ -3,13 +3,14 @@
         <h1 class="name">Домашняя работа "Строки"</h1>
         <div class="content">
             <div class="content_item">
-                <p>Задача № слайд </p>
-                <p><!-- TODO: текст задачи --></p>
+                <p>Задача №1 слайд 22</p>
+                <p>Дата строка «fact». Привести строку к виду «Fact».</p>
             </div>
             <div class="content_item">
                 <p>
                     <?php
-                    // TODO: решение
+                    $str = "fact";
+                    echo ucfirst($str);
                     ?>
                 </p>
             </div>
