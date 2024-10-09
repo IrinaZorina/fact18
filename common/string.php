@@ -34,5 +34,21 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №3 слайд 22</p>
+                <p>Дана строка «Привет, мир». Найти количество символа «и» в строке (регистр учитывать).</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $str = "Привет, мир";
+                    $count = substr_count($str, "и");
+                    echo "Количество символов: {$count}";
+                    unset($str, $count);
+                    ?>
+                </p>
+            </div>
+        </div>
     </main>
 </section>
