@@ -116,5 +116,23 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №2 слайд 23</p>
+                <p>Дана строка $str. Замените в ней все буквы 'a' на цифру 1, буквы 'b' - на 2, а буквы 'c' - на 3.</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $str = 'abcdefghijklmnop';
+                    $str = str_replace('a', '1', $str);
+                    $str = str_replace('b', '2', $str);
+                    $str = str_replace('c', '3', $str);
+                    echo "{$str}";
+                    unset($str);
+                    ?>
+                </p>
+            </div>
+        </div>
     </main>
 </section>
