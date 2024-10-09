@@ -134,5 +134,20 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №3 слайд 23</p>
+                <p>Дана строка 'abc abc abc'. Определите позицию последней буквы 'b'.</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $str = "abc abc abc";
+                    $position = strrpos($str, "b");
+                    echo "Позиция последней буквы 'b': {$position}";
+                    ?>
+                </p>
+            </div>
+        </div>
     </main>
 </section>
