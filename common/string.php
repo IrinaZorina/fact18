@@ -107,7 +107,7 @@
                 <p>
                     <?php
                     $str = 'Привет, мир!';
-                    if (strlen($str) > 5) {
+                    if (mb_strlen($str) > 5) {
                         $str = mb_substr($str, 0, 5) . '...';
                     }
                     echo $str;
