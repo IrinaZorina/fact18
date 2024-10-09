@@ -30,6 +30,10 @@ else {
 <div>
      <a href="arrays.php">Ссылка на Домашнюю работу по массивам</a>
 </div>
+
+    <div>
+        <a href="strings.php">Ссылка на Домашнюю работу по строкам</a>
+    </div>
 </header>
 
 </body>

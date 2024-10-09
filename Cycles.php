@@ -5,7 +5,7 @@ include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
 <div class="TaskCycles">
 
 <?php
-
+echo 'YOOHOO';
 echo "Задача 1, слайд 25.Выведите столбец чисел от 5 до 13. <br>";  
 for ($i = 1; $i <= 13; $i++) {
     echo "$i <br>";

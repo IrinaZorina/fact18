@@ -1,6 +1,7 @@
+
 .Header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     font-family: 'Roboto', Arial, sans-serif;
     background-color: lightslategray;
     text-align: center;
@@ -17,6 +18,14 @@
     background-color: lightslategray;
     text-align: center;
     color: white;
+}
+
+.FirstSentence {
+    color: red;
+}
+
+.OddWords {
+    color: yellow;
 }
 
 .TaskCycles {
@@ -82,8 +91,8 @@
 .footer {  
     background-color: lightslategray;
     text-align: center;
-    height: 100px;
-    font-size: 20px;
+    height: 200px;
+    font-size: 15px;
 
 }
 
