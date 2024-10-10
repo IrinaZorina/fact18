@@ -149,5 +149,24 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №4 слайд 23</p>
+                <p>Дана строка 'html css php'.
+                   С помощью функции explode запишите каждое слово этой строки в отдельный элемент массива.</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $str = "html css php";
+                    $words = explode(" ", $str);
+                    echo '<pre>';
+                    var_dump($words);
+                    echo '</pre>';
+                    unset($str, $words);
+                    ?>
+                </p>
+            </div>
+        </div>
     </main>
 </section>
