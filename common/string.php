@@ -168,5 +168,34 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №5 слайд 23</p>
+                <p>В двух строках содержатся даты вида День-Месяц-Год (например, 10-02-2015).
+                   Определите количество дней между датами.</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    function countDaysBetweenDates($date1, $date2) {
+                        $timestamp1 = strtotime($date1);
+                        $timestamp2 = strtotime($date2);
+                        if ($timestamp1 === false || $timestamp2 === false) {
+                            return "Ошибка: одна или обе даты указаны в неверном формате.";
+                        }
+                        $secondsDifference = abs($timestamp1 - $timestamp2);
+                        $daysDifference = floor($secondsDifference / (60 * 60 * 24));
+
+                        return $daysDifference;
+                    }
+                    $date1 = '23-12-2023';
+                    $date2 = date('d-m-Y');
+
+                    $daysBetween = countDaysBetweenDates($date1, $date2);
+                    echo "Количество дней между {$date1} и {$date2}: {$daysBetween} дней.";
+                    ?>
+                </p>
+            </div>
+        </div>
     </main>
 </section>
