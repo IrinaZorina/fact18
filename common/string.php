@@ -197,5 +197,45 @@
                 </p>
             </div>
         </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №2 слайд 24</p>
+                <p>Подсчитать количество гласных букв на вашей странице.</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $content = strip_tags(file_get_contents(__DIR__ . '/mainpage.php'));
+                    $content .= strip_tags(file_get_contents(__DIR__ . '/header.php'));
+                    $content .= strip_tags(file_get_contents(__DIR__ . '/footer.php'));
+                    function countVowels($content) {
+                        $vowelsPattern = '/[аеиоуюяё]/iu';
+                        preg_match_all($vowelsPattern, $content, $matches);
+                        return count($matches[0]);
+                    }
+                    $numberOfVowels = countVowels($content);
+                    echo "Количество гласных букв в строке: {$numberOfVowels}";
+                    ?>
+                </p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_item">
+                <p>Задача №3 слайд 24</p>
+                <p>Посчитать количество слов на вашей странице.</p>
+            </div>
+            <div class="content_item">
+                <p>
+                    <?php
+                    $content = strip_tags(file_get_contents(__DIR__ . '/mainpage.php'));
+                    $content .= strip_tags(file_get_contents(__DIR__ . '/header.php'));
+                    $content .= strip_tags(file_get_contents(__DIR__ . '/footer.php'));
+                    $words = preg_split('/\s+/', $content, -1, PREG_SPLIT_NO_EMPTY);
+                    $wordCount = count($words);
+                    echo "Количество слов: " . $wordCount;
+                    ?>
+                </p>
+            </div>
+        </div>
     </main>
 </section>
