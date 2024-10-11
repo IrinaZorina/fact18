@@ -1,43 +1,16 @@
 <?php
-$aboutText = require_once __DIR__ . '/about_text.php';
+$about = require_once __DIR__ . '/about_text.php';
 $testimonial = require_once __DIR__ . '/testimonial_text.php';
 
 $color1 = '#008080';
 $color2 = '#4682B4';
 
-$words = preg_split('/\s+/', $testimonial, -1, PREG_SPLIT_NO_EMPTY);
+$testimonialText = colorEvenWords($testimonial, $color1, $color2);
 
-$testimonialText = '';
-
-foreach ($words as $index => $word) {
-    $color = ($index % 2 == 0) ? $color1 : $color2;
-    $testimonialText .= '<span style="color: ' . $color . ';">' . $word . '</span> ';
-}
-
-function colorFirstSentence($text, $color) {
-    $text = strip_tags($text);
-    if (preg_match('/^(.*?[.!?])/', $text, $matches)) {
-        $firstSentence = '<p><span style="color:' . htmlspecialchars($color) . ';">' . $matches[0] . '</span></p>';
-        return str_replace($matches[0], $firstSentence, $text);
-    }
-    return $text;
-}
-
-$output = colorFirstSentence($aboutText, '#808000');
+$aboutText = colorFirstSentence($about, '#808000');
 
 $date1 = '26-12-1988';
 $date2 = date('d-m-Y');
-function countDaysBetweenDates($date1, $date2) {
-    $timestamp1 = strtotime($date1);
-    $timestamp2 = strtotime($date2);
-    if ($timestamp1 === false || $timestamp2 === false) {
-        return "Ошибка: одна или обе даты указаны в неверном формате.";
-    }
-    $secondsDifference = abs($timestamp1 - $timestamp2);
-    $daysDifference = floor($secondsDifference / (60 * 60 * 24));
-
-    return $daysDifference;
-}
 ?>
 <section class="wrapper main_block border">
     <aside>
@@ -48,7 +21,7 @@ function countDaysBetweenDates($date1, $date2) {
         <h2 class="name">(26.12.1988-<?=date('d.m.Y')?>): <?php echo countDaysBetweenDates($date1, $date2);?> дня.</h2>
         <div class="content">
             <div class="content_item">
-                <?=$output?>
+                <?=$aboutText?>
             </div>
             <div class="content_item">
                 <?=$testimonialText?>

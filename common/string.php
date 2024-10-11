@@ -177,17 +177,6 @@
             <div class="content_item">
                 <p>
                     <?php
-                    function countDaysBetweenDates($date1, $date2) {
-                        $timestamp1 = strtotime($date1);
-                        $timestamp2 = strtotime($date2);
-                        if ($timestamp1 === false || $timestamp2 === false) {
-                            return "Ошибка: одна или обе даты указаны в неверном формате.";
-                        }
-                        $secondsDifference = abs($timestamp1 - $timestamp2);
-                        $daysDifference = floor($secondsDifference / (60 * 60 * 24));
-
-                        return $daysDifference;
-                    }
                     $date1 = '23-12-2023';
                     $date2 = date('d-m-Y');
 
@@ -210,11 +199,7 @@
                     $content .= strip_tags(file_get_contents(__DIR__ . '/footer.php'));
                     $content .= strip_tags(require_once __DIR__ . '/about_text.php');
                     $content .= strip_tags(require_once __DIR__ . '/testimonial_text.php');
-                    function countVowels($content) {
-                        $vowelsPattern = '/[аеёиоуыэюяАЕЁИОУЫЭЮЯ]/u';
-                        preg_match_all($vowelsPattern, $content, $matches);
-                        return count($matches[0]);
-                    }
+
                     $numberOfVowels = countVowels($content);
                     echo "Количество гласных: {$numberOfVowels}";
                     ?>
@@ -229,8 +214,7 @@
             <div class="content_item">
                 <p>
                     <?php
-                    $words = preg_split('/\s+/', $content, -1, PREG_SPLIT_NO_EMPTY);
-                    $wordCount = count($words);
+                    $wordCount = countWords($content);
                     echo "Количество слов: " . $wordCount;
                     ?>
                 </p>
