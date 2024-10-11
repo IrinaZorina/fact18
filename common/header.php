@@ -24,9 +24,9 @@ if ($hour > 8 && $hour < 22) {
         <img src="assets/images/logo.svg" alt="Логотип Факт.Академия">
     </a>
     <nav>
-        <a class="nav_item" href="mendeleev.php">Менделеев</a>
-        <a class="nav_item" href="loop.php">Циклы</a>
-        <a class="nav_item" href="array.php">Массивы</a>
-        <a class="nav_item" href="string.php">Строки</a>
+        <a class="nav_item" href="?page=mendeleev">Менделеев</a>
+        <a class="nav_item" href="?page=loop">Циклы</a>
+        <a class="nav_item" href="?page=array">Массивы</a>
+        <a class="nav_item" href="?page=string">Строки</a>
     </nav>
 </header>
