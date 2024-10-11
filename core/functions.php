@@ -60,3 +60,31 @@ function countWords($content)
     $words = preg_split('/\s+/', $content, -1, PREG_SPLIT_NO_EMPTY);
     return count($words);
 }
+
+/**
+ * Сравниваем два числа и возвращаем наибольшее
+ */
+function maxNumber($num1 ,$num2)
+{
+    if ($num1 > $num2) {
+        return $num1;
+    }
+    return  $num2;
+}
+
+/**
+ * Получаем значение гипотенузы
+ */
+function getHypotenuse($num1, $num2) {
+    return sqrt(pow($num1, 2) + pow($num2, 2));
+}
+
+/**
+ * Функция, которая увеличивает число 10 до 1 000 000
+ */
+function multiNum($num = 10) {
+    while ($num <= 1000000) {
+        echo $num . PHP_EOL;
+        $num *= 10;
+    }
+}
