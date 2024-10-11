@@ -1,19 +1,57 @@
+<?php
+$aboutText = require_once __DIR__ . '/about_text.php';
+$testimonial = require_once __DIR__ . '/testimonial_text.php';
+
+$color1 = '#008080';
+$color2 = '#4682B4';
+
+$words = preg_split('/\s+/', $testimonial, -1, PREG_SPLIT_NO_EMPTY);
+
+$testimonialText = '';
+
+foreach ($words as $index => $word) {
+    $color = ($index % 2 == 0) ? $color1 : $color2;
+    $testimonialText .= '<span style="color: ' . $color . ';">' . $word . '</span> ';
+}
+
+function colorFirstSentence($text, $color) {
+    $text = strip_tags($text);
+    if (preg_match('/^(.*?[.!?])/', $text, $matches)) {
+        $firstSentence = '<p><span style="color:' . htmlspecialchars($color) . ';">' . $matches[0] . '</span></p>';
+        return str_replace($matches[0], $firstSentence, $text);
+    }
+    return $text;
+}
+
+$output = colorFirstSentence($aboutText, '#808000');
+
+$date1 = '26-12-1988';
+$date2 = date('d-m-Y');
+function countDaysBetweenDates($date1, $date2) {
+    $timestamp1 = strtotime($date1);
+    $timestamp2 = strtotime($date2);
+    if ($timestamp1 === false || $timestamp2 === false) {
+        return "Ошибка: одна или обе даты указаны в неверном формате.";
+    }
+    $secondsDifference = abs($timestamp1 - $timestamp2);
+    $daysDifference = floor($secondsDifference / (60 * 60 * 24));
+
+    return $daysDifference;
+}
+?>
 <section class="wrapper main_block border">
     <aside>
         <img class="my_photo" src="assets/images/my_photo.jpg" alt="Моя Фотография">
     </aside>
     <main>
         <h1 class="name">Александр Торопов</h1>
+        <h2 class="name">(26.12.1988-<?=date('d.m.Y')?>): <?php echo countDaysBetweenDates($date1, $date2);?> дня.</h2>
         <div class="content">
             <div class="content_item">
-                <p>Пишу разный <a href="https://github.com/aletoropov" target="_blank" title="Мой GitHub">код</a> на PHP и JavaScript, использую Linux Mint, делаю буклеты в Abode InDesign.</p>
-                <p>Люблю уехать в закат на велосипеде &#128690;</p>
-                <p>Люблю создавать цифровые продукты, которые приносят пользу людям &#128187;</p>
-                <p>Могу управлять скоростным поездом &#128646;</p>
+                <?=$output?>
             </div>
             <div class="content_item">
-                <p>Все понравилось, думаю это будет увлекательное приключение в мир кодинга и 1C Bitrix.</p>
-                <p>Надеюсь успешно справиться со всеми испытаниями и стать сертифицированным 1C Bitrix разработчиком.</p>
+                <?=$testimonialText?>
             </div>
         </div>
     </main>

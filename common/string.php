@@ -208,13 +208,15 @@
                     $content = strip_tags(file_get_contents(__DIR__ . '/mainpage.php'));
                     $content .= strip_tags(file_get_contents(__DIR__ . '/header.php'));
                     $content .= strip_tags(file_get_contents(__DIR__ . '/footer.php'));
+                    $content .= strip_tags(require_once __DIR__ . '/about_text.php');
+                    $content .= strip_tags(require_once __DIR__ . '/testimonial_text.php');
                     function countVowels($content) {
-                        $vowelsPattern = '/[аеиоуюяё]/iu';
+                        $vowelsPattern = '/[аеёиоуыэюяАЕЁИОУЫЭЮЯ]/u';
                         preg_match_all($vowelsPattern, $content, $matches);
                         return count($matches[0]);
                     }
                     $numberOfVowels = countVowels($content);
-                    echo "Количество гласных букв в строке: {$numberOfVowels}";
+                    echo "Количество гласных: {$numberOfVowels}";
                     ?>
                 </p>
             </div>
@@ -227,9 +229,6 @@
             <div class="content_item">
                 <p>
                     <?php
-                    $content = strip_tags(file_get_contents(__DIR__ . '/mainpage.php'));
-                    $content .= strip_tags(file_get_contents(__DIR__ . '/header.php'));
-                    $content .= strip_tags(file_get_contents(__DIR__ . '/footer.php'));
                     $words = preg_split('/\s+/', $content, -1, PREG_SPLIT_NO_EMPTY);
                     $wordCount = count($words);
                     echo "Количество слов: " . $wordCount;
