@@ -12,6 +12,8 @@
       <div class="la">    
 				<div class="links"><a href="/tasks.php">Циклы</a></div>
         <div class="links2"><a href="/arrays.php">Массивы</a></div>
+        <div class="links3"><a href="/strings.php">Cтроки</a></div>
+        <div class="links4"><a href="/function.php">Функции</a></div>
       </div>
 		</div>
 				</header>

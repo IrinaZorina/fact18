@@ -1,5 +1,7 @@
-<?php // вообще конечно тут винегрет на винегрете, не знаю как, но работает
+<?php 
+
 include 'header.php';
+
 $time = date('H'); // получаем время
 if ($time >= 8 && $time <= 17) {
     $backgroundColor = '#fff'; // Белый цвет
@@ -20,18 +22,17 @@ function countVowels($str) {
 // Функция для подсчета слов
 function countWords($str) {
     return str_word_count($str, 0, 'абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ');
-    // Start of Selection
-    // Remove HTML tags
+    //убираем теги
     $text = strip_tags($str);
-    // Remove non-alphabetic characters
+    // убираем все символы через регулярку
     $text = preg_replace('/[^a-zA-Zа-яА-ЯёЁ\s]/u', ' ', $text);
-    // Remove extra spaces
+    // убираем пробелы и прочую чешую
     $text = preg_replace('/\s+/', ' ', $text);
-    // Trim leading/trailing whitespace
+    // убираем пробелы
     $text = trim($text);
-    // Create array of words
+    // разделяем
     $words = explode(' ', $text);
-    // Return word count
+    // возвращаем количество
     return count($words);
 }
 // Инициализация переменных
@@ -111,6 +112,7 @@ echo $coloredText;
 .even-word { color: blue; }
 .odd-word { color: red; }
 </style>
+
 			</div>
 			<br />
 			<div class="table3">
@@ -167,7 +169,7 @@ echo '<p>Текущая дата: ' . $currentDate->format('d.m.Y') . '</p>';
 echo '<p>Разница в днях: ' . $daysDifference . '</p>';
 echo '</div>';
 
-// Передача данных в footer
+// Передача данных в footer через глобальные
 $GLOBALS['totalVowels'] = $totalVowels;
 $GLOBALS['totalWords'] = $totalWords;
 

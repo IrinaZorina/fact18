@@ -1,11 +1,13 @@
-
+.two1 {
+	color: blueviolet;
+}
 .hd {
 	height: 50px;
 	width: 100%;
 	background-color: rgb(140, 140, 140);
 }
 
-.links, .links2 {
+.links, .links2, .links3, .links4 {
 	text-align: center;
 	font-size: 30px;
 }

@@ -5,4 +5,6 @@
     </div>
   </footer> 
 </body>
-</html>
+    <p>Количество гласных на странице: <?php echo $GLOBALS['totalVowels']; ?></p>
+    <p>Количество слов на странице: <?php echo $GLOBALS['totalWords']; ?></p>
+    </html>
