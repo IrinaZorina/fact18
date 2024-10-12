@@ -77,8 +77,9 @@ function maxNumber($num1 ,$num2)
 /**
  * Получаем значение гипотенузы
  */
-function getHypotenuse($num1, $num2) {
-    return sqrt(pow($num1, 2) + pow($num2, 2));
+function getHypotenuse($num1, $num2, $round = 2) {
+    $hypotenuse = sqrt(pow($num1, 2) + pow($num2, 2));
+    return round($hypotenuse, $round);
 }
 
 /**
@@ -89,6 +90,8 @@ function multiNum($num = 10) {
         echo $num . PHP_EOL;
         $num *= 10;
     }
+
+    return $num;
 }
 
 /**
@@ -111,7 +114,7 @@ function arraySum($array)
     $sum = array_sum($array);
     $count = count($array);
 
-    return $count / $sum;
+    return $sum / $count;
 }
 
 /**
@@ -123,7 +126,7 @@ function countWordsInString($string)
     $string = str_replace(".", "", $string);
     $arr = explode(" ", $string);
 
-    return count($arr) + 1;
+    return count($arr);
 }
 
 /**

@@ -28,5 +28,6 @@ if ($hour > 8 && $hour < 22) {
         <a class="nav_item" href="?page=loop">Циклы</a>
         <a class="nav_item" href="?page=array">Массивы</a>
         <a class="nav_item" href="?page=string">Строки</a>
+        <a class="nav_item" href="?page=functions">Функции</a>
     </nav>
 </header>

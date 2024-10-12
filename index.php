@@ -30,6 +30,9 @@ switch ($page) {
     case 'form':
         include_once __DIR__ . '/common/form.php';
         break;
+    case 'functions':
+        include_once __DIR__ . '/common/functions.php';
+        break;
     default:
         include_once __DIR__ . '/common/mainpage.php';
 }
