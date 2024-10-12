@@ -18,7 +18,7 @@ $date2 = date('d-m-Y');
     </aside>
     <main>
         <h1 class="name">Александр Торопов</h1>
-        <h2 class="name">(26.12.1988-<?=date('d.m.Y')?>): <?php echo countDaysBetweenDates($date1, $date2);?> дня.</h2>
+        <h2 class="name"><?php echo countDaysBetweenDates($date1, $date2);?> дня дарю людям радость</h2>
         <div class="content">
             <div class="content_item">
                 <?=$aboutText?>

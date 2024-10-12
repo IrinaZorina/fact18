@@ -58,6 +58,7 @@ function countVowels($content) {
 function countWords($content)
 {
     $words = preg_split('/\s+/', $content, -1, PREG_SPLIT_NO_EMPTY);
+
     return count($words);
 }
 
@@ -69,6 +70,7 @@ function maxNumber($num1 ,$num2)
     if ($num1 > $num2) {
         return $num1;
     }
+
     return  $num2;
 }
 
@@ -86,5 +88,90 @@ function multiNum($num = 10) {
     while ($num <= 1000000) {
         echo $num . PHP_EOL;
         $num *= 10;
+    }
+}
+
+/**
+ * Функция для объявления массива со случайными элементами
+ */
+function randomArray($num = 10)
+{
+    for ($i = 0; $i < $num; $i++) {
+        $arr[] = rand(1, 100);
+    }
+
+    return $arr;
+}
+
+/**
+ * Функция, которая принимает массив и возвращает среднеарифметическое значение массива
+ */
+function arraySum($array)
+{
+    $sum = array_sum($array);
+    $count = count($array);
+
+    return $count / $sum;
+}
+
+/**
+ * Функция, которая принимает строку. Вернуть количество слов в строке
+ */
+function countWordsInString($string)
+{
+    $string = strip_tags($string);
+    $string = str_replace(".", "", $string);
+    $arr = explode(" ", $string);
+
+    return count($arr) + 1;
+}
+
+/**
+ * Функция, которая принимает одномерный массив и возвращает массив, заполненный случайными числами
+ */
+function arrayInputNum($array)
+{
+    foreach ($array as $key) {
+        $new_array[$key] = rand(1, count($array));
+    }
+
+    return $new_array;
+}
+
+/**
+ * Функция, которая определит количество слов строке
+ */
+function strCountWords($string)
+{
+    $string = strip_tags($string);
+    $string = str_replace(",", "", $string);
+
+    return str_word_count($string);
+}
+
+/**
+ * Написать функцию, которая выведет в обратном порядке буквы
+ */
+function stringRevers($string)
+{
+    echo strrev($string);
+}
+
+/**
+ * Функция, которая выводит на экран длину строки.
+ */
+function stringLength($string)
+{
+    echo strlen($string);
+}
+
+/**
+ * Функция, которая выводит каждую букву на новую строку
+ */
+function echoOneLetter($string)
+{
+    $arr = str_split($string);
+    foreach ($arr as $letter) {
+        echo $letter . '<br>';
     }
 }
