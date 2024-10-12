@@ -15,6 +15,21 @@ function countDaysBetweenDates($date1, $date2) {
 }
 
 /**
+ * Функция, которая возвращает стилевой файл в зависимости от времени
+ */
+function getTimeStyle()
+{
+    $hour = date('H');
+    $style = 'assets/css/style_night.css';
+
+    if ($hour > 8 && $hour < 22) {
+        $style = 'assets/css/style.css';
+    }
+
+    return $style;
+}
+
+/**
  * Функция для окрашивания первого предложения
  */
 function colorFirstSentence($text, $color = '#808000') {

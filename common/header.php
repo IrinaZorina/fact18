@@ -1,11 +1,6 @@
 <?php
-$hour = date('H');
-
-$style = 'assets/css/style_night.css';
-
-if ($hour > 8 && $hour < 22) {
-    $style = 'assets/css/style.css';
-}
+// получаем файл стилей
+$style = getTimeStyle();
 ?>
 
 <!DOCTYPE html>
