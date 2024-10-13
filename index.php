@@ -36,8 +36,12 @@ include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
             ?>
         </div>
             <?php
+            function EditedInfoAboutMyself($InfoAboutMyself, $PositionOfFirstDot) {
                 $NewInfoAboutMyself = mb_substr($InfoAboutMyself, $PositionOfFirstDot + 2, -1);
-            echo $NewInfoAboutMyself;
+            return $NewInfoAboutMyself;
+            }
+            $EditedInfoAboutMyselfConst = EditedInfoAboutMyself($InfoAboutMyself, $PositionOfFirstDot);
+            echo $EditedInfoAboutMyselfConst;
             ?>
 
         </div>
@@ -53,15 +57,20 @@ include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
             ?>
         </div>
         <?php
-        $words = explode('.', $InfoAboutCourse);
-        $OddWordsString ='';
-        foreach ($words as $index => $word) {
 
-            if ($index % 2 !== 0) {
-             $OddWordsString = $word;
+        function CountOddLetters($InfoAboutCourse) {
+            $words = explode('.', $InfoAboutCourse);
+            $OddWordsString ='';
+            foreach ($words as $index => $word) {
+
+                if ($index % 2 !== 0) {
+                    $OddWordsString = $word;
+                }
             }
+            return $OddWordsString;
         }
-        echo $OddWordsString;
+        $CountOfOddLettersConst = CountOddLetters($InfoAboutCourse);
+        echo $CountOfOddLettersConst;
         ?>
     </div>
     </div>

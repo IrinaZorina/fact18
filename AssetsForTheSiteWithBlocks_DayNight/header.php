@@ -1,11 +1,17 @@
 <?php
-$time = date("G");
-if ($time > 8 and $time < 18) {
-    $a = "AssetsForTheSiteWithBlocks_DayNight/StylesForTheSiteWithBlocks_Day.css";
+
+function ChangeStyleDayNight () {
+    $time = date("G");
+    if ($time > 8 and $time < 18) {
+        $a = "AssetsForTheSiteWithBlocks_DayNight/StylesForTheSiteWithBlocks_Day.css";
+    }
+    else {
+        $a = "AssetsForTheSiteWithBlocks_DayNight/StylesForTheSiteWithBlocks_Night.css";
+    }
+    return $a;
 }
-else {
-    $a = "AssetsForTheSiteWithBlocks_DayNight/StylesForTheSiteWithBlocks_Night.css";
-}
+$StyleDayNightForTheSite = ChangeStyleDayNight();
+
 ?>
 
 
@@ -17,7 +23,7 @@ else {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="<?php echo "$a" ?>">
+    <link rel="stylesheet" href="<?php echo "$StyleDayNightForTheSite" ?>">
 </head>
 <body>
 <header class="Header">
@@ -33,6 +39,9 @@ else {
 
     <div>
         <a href="strings.php">Ссылка на Домашнюю работу по строкам</a>
+    </div>
+    <div>
+        <a href="functions.php">Ссылка на Домашнюю работу по функциям</a>
     </div>
 </header>
 
