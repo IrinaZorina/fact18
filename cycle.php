@@ -1,4 +1,4 @@
-<?php include  'assets/inc/header.php'?>
+<?php include 'assets/header.php' ?>
  <?php
 // Слайд №23 задание 4
     $ch = 1;
@@ -123,4 +123,4 @@
 
     }?></div>
 
-<?php include  'assets/inc/footer.php'?>
+<?php include 'assets/footer.php' ?>

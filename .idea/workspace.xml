@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b6b17824-9207-498f-bb71-8461c7e22f19" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/function.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/string.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style_about_day.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style_about_night.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style_table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/01-29-ar9vi4-tsarskie-vorota.cd9f7e96.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/4588708dd6c5965fa9916afeeab427eb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/663021e8e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/ava.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/butterfly.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/caterpillar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/dolmens-of-the-western-caucasus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/donkey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/filicin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/flyf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/fox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/krasnodar-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/monkey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/park-galitskogo-1330-530x322.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/rock-sail.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/sochi-national-park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/sochi-park.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/squirrel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/telegram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/imag/whatsapp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/inc/about.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/inc/assets/css/style_table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/inc/cikli.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/inc/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/inc/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/inc/massiv.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/inc/table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cikli.php" beforeDir="false" afterPath="$PROJECT_DIR$/cycle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson2.php" beforeDir="false" afterPath="$PROJECT_DIR$/lesson2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/massiv.php" beforeDir="false" afterPath="$PROJECT_DIR$/array.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/table.php" beforeDir="false" afterPath="$PROJECT_DIR$/table.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2nOAkdQucQuH68rMn0uDyfO2HUJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PS-241.14494.237" />
+        <option value="bundled-php-predefined-ba97393d7c68-8f0632a2a215-com.jetbrains.php.sharedIndexes-PS-241.14494.237" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6b17824-9207-498f-bb71-8461c7e22f19" name="Changes" comment="" />
+      <created>1728833892507</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728833892507</updated>
+      <workItem from="1728833893527" duration="12439000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

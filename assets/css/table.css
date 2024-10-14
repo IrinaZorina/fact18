@@ -1,15 +1,9 @@
-.conteiner1 {
+.container_t {
     display: grid;
-    grid: 200px;
+    grid t: 200 px;
+    background-color: coral;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 15px);
-    background-color: darksalmon;
-    }
-
-.width
-.heigth {
-    grid-row-start: 1;
-    grid-row-end: 3;
 }
 
 .simvol1 {
