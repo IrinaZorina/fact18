@@ -65,6 +65,8 @@
                             'assets/images/arrays/1.png',
                             'assets/images/arrays/2.png',
                             'assets/images/arrays/3.webp',
+                            'assets/images/arrays/4.png',
+                            'assets/images/arrays/5.png',
                     ];
                     $image = rand(0, count($images) - 1);
                     ?>
