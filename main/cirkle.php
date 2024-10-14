@@ -182,17 +182,26 @@ for ($i=0; $i < 20 ; $i++) {
 <br><br>
 Слайд 25 задание 2
 <?php
-$number2 = 1000;
-$repite = 1;
-do {
-    $number2 = ($number2 / 2);
-    if ($number2 < 30) {
-        break;
-    }
-    $repite++;
-    echo "<br> number 2  = $number2";
-} while ($number2 > 20);
-  echo "<br> repite = $repite";
+//$number2 = 1000;
+//$repite = 1;
+//do {
+//    $number2 = ($number2 / 2);
+//    if ($number2 < 30) {
+//        break;
+//    }
+//    $repite++;
+//    echo "<br> number 2  = $number2";
+//} while ($number2 > 20);
+//  echo "<br> repite = $repite";
+//
+echo '<pre>';
+echo 'Цикл for' . PHP_EOL;
+for ($num = 1000, $repeats = 0; $num > 50; $num /= 2) {
+    $repeats++;
+}
+echo $repeats;
+echo '</pre>';
+
 ?>
 
 <br><br>

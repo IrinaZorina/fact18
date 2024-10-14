@@ -185,30 +185,6 @@ echo '</pre>';
 $re1 = 1;
 $re2 = 1;
 $re3 = 1;
-$result4 = 0;
-for ($i = 0; $i < count($arr)-1; $i++) {
-    for ($j = 0; $j < count($arr[$i]); $j++) {
-        if (($j + 1)%2 == 0) {
-            if ($j == 1) {
-                if ($arr[$i][$j] > $re1) {
-                    $re1 = $arr[$i][$j];
-                }
-            }
-        } elseif ($j == 3) {
-            if ($arr[$i][$j] > $re2) {
-                $re2 = $arr[$i][$j];
-        }
-        }
-        elseif ($j == 5) {
-            if ($arr[$i][$j] > $re3) {
-                $re3 = $arr[$i][$j];
-        }
-        }
-    }
-}
-$result4 = $re1 * $re2 * $re3;
-echo "произведение = $result4";
-
 
 
 

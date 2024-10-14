@@ -1,17 +1,10 @@
-<footer>
-    <div class="create-line1"></div>
+<footer class="foot">
     <div>© 2024 Лугвин</div>
-
-    <div class="foot"> <?php
-
-        $dayNow = strtotime('10.10.2024');
-        $birthDay = strtotime('19.06.1994');
-        $res4 = 0;
-        $days = 0;
-        echo '<br>';
-        echo '<br>';
-
-        $res4 = abs($dayNow - $birthDay) / 60 /60 /24;
-
-        echo "разница в днях $res4"; ?></div>
-  </footer>
+    <div>Разница между текущей датой и датой рождения в днях <?=getDatesDiff('19.06.1994')?> </div>
+</footer>
+<?php
+if (str_ends_with($_SERVER['DOCUMENT_URI'], 'index.php')) {
+    echo getMainPageWordsCount();
+}
+?>
+</footer>
