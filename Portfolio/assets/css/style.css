@@ -1,0 +1,120 @@
+body{
+    background-color: blanchedalmond;
+}
+header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.argon{
+    background-color: gold;
+    font-size: 30px;
+}
+.container{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.full_info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    height: max-content;
+    width: 65%;
+    margin-left: 30px;
+    margin-right: 22px;
+}
+.fio{
+    width: 100%;
+    background-color: chocolate;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.blocks_text{
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    row-gap: 20px;
+}
+.about_myself, .review{
+    background-color: darksalmon;
+    width: 45%;
+
+    padding: 10px;
+    text-align: left;
+    font-size: 1.5em;
+}
+h1{
+    color: whitesmoke;
+}
+h2{
+    text-align: center;
+}
+.block_okb_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+.logo{
+    height: 270px;
+    width: 270px;
+}
+.block_Tu, .block_Il, .block_Su, .block_MiG{
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+}
+.block_aircraft_list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+.image_aircraft{
+    height: 500px;
+    width: 500px;
+}
+.block_Tu-144, .block_MiG-8, .block_Su-31, .block_Il-103{
+    background-color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+@media screen and (max-width: 1261px){
+    .full_info{
+        width: auto;
+    }
+    .block_okb_list{
+        justify-content: space-around;
+
+    }
+    .block_aircraft_list{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 653px){
+    .image_aircraft{
+        height: 330px;
+        width: 330px;
+    }
+}
+@media screen and (max-width: 487px){
+    .about_myself, .review{
+        width: 330px;
+        justify-content: space-around;
+    }
+}
