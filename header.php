@@ -10,10 +10,13 @@
   <header>
 		<div class="hd">
       <div class="la">    
-				<div class="links"><a href="/tasks.php">Циклы</a></div>
-        <div class="links2"><a href="/arrays.php">Массивы</a></div>
-        <div class="links3"><a href="/strings.php">Cтроки</a></div>
-        <div class="links4"><a href="/function.php">Функции</a></div>
+        <div ><a href="/index.php"   class="links">Главная</a></div>
+				<div ><a href="/tasks.php"   class="links">Циклы</a></div>
+        <div ><a href="/arrays.php"  class="links">Массивы</a></div>
+        <div ><a href="/strings.php" class="links">Cтроки</a></div>
+        <div ><a href="/function.php"class="links">Функции</a></div>
+        <div ><a href="/methods.php" class="links">Методы</a></div>
+        <div ><a href="/auth.php"   class="links" >Вход</a></div>
       </div>
 		</div>
 				</header>

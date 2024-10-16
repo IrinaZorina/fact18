@@ -1,4 +1,5 @@
 <?php
+include 'header.php';
 
 function a() {
   $a = 1;

@@ -2,24 +2,25 @@
 	color: blueviolet;
 }
 .hd {
-	height: 50px;
+	height: 4dvh;
 	width: 100%;
 	background-color: rgb(140, 140, 140);
 }
 
-.links, .links2, .links3, .links4 {
+.links {
 	text-align: center;
 	font-size: 30px;
+	text-decoration: none!important;
 }
    
 .la {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
+	
 }
 
 .ft {
-	height: 50px;
+	height: 4dvh;
 	width: 100%;
 	background-color: rgb(140, 140, 140);
 	font-size: 20px;

@@ -1,4 +1,6 @@
 <?php
+include 'header.php';
+
 echo '<p> Задание 1 <br> </p>';
 
 $arr1 = [50, 45, 40, 35, 30];

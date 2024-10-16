@@ -1,4 +1,6 @@
 <?php
+include 'header.php';
+
 $str = "hello";
 $arr = [substr($str, 0, 2), substr($str, 2)];
 print_r($arr); 

@@ -1,4 +1,6 @@
 <?php
+include 'header.php';
+
 echo " <br> Задание1, слайд23 <br><br>";
 for ($i = 1; $i <= 30; $i++) {
     if ($i % 2 == 0) {
