@@ -24,5 +24,6 @@ $style = getTimeStyle();
         <a class="nav_item" href="?page=array">Массивы</a>
         <a class="nav_item" href="?page=string">Строки</a>
         <a class="nav_item" href="?page=functions">Функции</a>
+        <a class="nav_item" href="?page=login">Войти</a>
     </nav>
 </header>

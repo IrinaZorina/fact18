@@ -33,6 +33,9 @@ switch ($page) {
     case 'functions':
         include_once __DIR__ . '/common/functions.php';
         break;
+    case 'login':
+        include_once __DIR__ . '/common/login.php';
+        break;
     default:
         include_once __DIR__ . '/common/mainpage.php';
 }
