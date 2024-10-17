@@ -150,3 +150,7 @@ h6,
 a {
     color: #ec0606 !important;
 }
+
+.input_item {
+    padding: 10px 5px;
+}
