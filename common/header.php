@@ -24,6 +24,12 @@ $style = getTimeStyle();
         <a class="nav_item" href="?page=array">Массивы</a>
         <a class="nav_item" href="?page=string">Строки</a>
         <a class="nav_item" href="?page=functions">Функции</a>
-        <a class="nav_item" href="?page=login">Войти</a>
+        <?php
+        if (isset($_SESSION['login'])):
+        ?>
+            <a class="nav_item" href="logout.php">Выйти</a>
+        <?php else: ?>
+            <a class="nav_item" href="?page=login">Войти</a>
+        <?php endif; ?>
     </nav>
 </header>

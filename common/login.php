@@ -4,19 +4,19 @@
         <div class="content">
             <div class="content_item">
                 <form action="login.php" method="POST">
-                    <div>
+                    <div class="input_item">
                         <label>
-                            Логин:
+                            Логин:<br>
                             <input type="text" name="login" required>
                         </label>
                     </div>
-                    <div>
+                    <div class="input_item">
                         <label>
-                            Пароль:
+                            Пароль:<br>
                             <input type="password" name="password" required>
                         </label>
                     </div>
-                    <div>
+                    <div class="input_item">
                         <input type="submit" name="enter" value="Войти">
                     </div>
                 </form>

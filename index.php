@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // получаем страницу из GET
 if (empty($_GET['page'])) {
     $page = 'home';
