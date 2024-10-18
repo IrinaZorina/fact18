@@ -1,4 +1,4 @@
-<?php include 'assets/header.php' ?>
+<?php include 'assets/inc/header.php' ?>
 
 
     <div class="title"><h1>Слайд №15</h1></div>
@@ -339,9 +339,6 @@ for ($i = 1; $i <= 6; $i++) {
         $max_value = 0;
     }
 }
-echo "Максимальные значения четных столбцов:";
-echo "<br>";
-print_r($max_value_array);
 $max_value = 1;
 foreach ($max_value_array as $key_xy11 => $value_xy11) {
     $max_value = $max_value * $value_xy11;
@@ -349,4 +346,4 @@ foreach ($max_value_array as $key_xy11 => $value_xy11) {
 
 echo "Произведение $max_value";
 ?>
-<?php include 'assets/footer.php'?>
+<?php include 'assets/inc/footer.php' ?>

@@ -137,4 +137,4 @@ echo "Дата2 => $date2_str";
 echo "<br>";
 echo $interval->format('разница %a дней');
 ?>
-<?php include 'assets/footer.php' ?>
+<?php include 'assets/footer.php'?>
