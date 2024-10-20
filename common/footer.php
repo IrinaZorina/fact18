@@ -13,6 +13,13 @@
             <img src="/assets/images/email.png" alt="E-mail">
         </a>
     </div>
+    <div>
+        <?php
+        if (isset($_SESSION['login'])) {
+            echo "Вы были на странице: {$_COOKIE['visit']} раз";
+        }
+        ?>
+    </div>
 </footer>
 </body>
 </html>

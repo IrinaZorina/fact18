@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+if (isset($_SESSION['login'])) {
+    $visit = $_COOKIE['visit'] ?? 0;
+    setcookie("visit", (int) $visit + 1);
+}
 // получаем страницу из GET
 if (empty($_GET['page'])) {
     $page = 'home';
