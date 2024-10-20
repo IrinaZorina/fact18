@@ -1,4 +1,12 @@
 <?php
+include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
+?>
+
+<div class="TaskCycles">
+
+
+
+<?php
 /*
  * Создайте куки с логином посетителя и временем последнего захода.
  * Куки должны хранится максимум 1 час.
@@ -12,7 +20,7 @@ echo '<br>';
 $Login = $_POST['Login'];
 setcookie('login', $Login, time() + 3600);
 $timeOfEntering = isset($_POST['Login']) ? $timeOfEntering = date("F j, Y, g:i a") : '';
-print_r($_COOKIE);
+
 echo $timeOfEntering;
 setcookie('TimeOfEntering', $timeOfEntering, time() + 3600);
 ?>
@@ -37,6 +45,7 @@ setcookie('TimeOfEntering', $timeOfEntering, time() + 3600);
 </html>
 
 <?php
+echo '<br><br><br><br>';
 echo 'Задача 3, слайд 12. Сделайте счетчик посещения сайта посетителем. 
 Каждый раз, заходя на сайт, он должен видеть надпись: Вы посетили наш сайт % раз!.';
 
@@ -48,7 +57,17 @@ $visitCount = (isset($_COOKIE['countEnters'])) ? $_COOKIE['countEnters'] + 1 : 1
 setcookie('countEnters', $visitCount, time() + 3600);
 
 
-echo '<br>';
+echo '<br><br><br>';
 echo 'Количество посещений сайта: ' . $visitCount;
+echo '<br><br><br><br><br><br><br><br><br><br>';
+?>
 
+</div>
+
+
+
+
+<?php
+
+include 'AssetsForTheSiteWithBlocks_DayNight/footer.php';
 ?>

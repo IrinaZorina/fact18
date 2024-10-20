@@ -44,6 +44,12 @@ $StyleDayNightForTheSite = ChangeStyleDayNight();
         <a href="functions.php">Ссылка на Домашнюю работу по функциям</a>
     </div>
     <div>
+        <a href="session.php">Ссылка на Домашнюю работу по session</a>
+    </div>
+    <div>
+        <a href="cookie.php">Ссылка на Домашнюю работу по cookie</a>
+    </div>
+    <div>
         <a href="getpost.php">Ссылка на страницу авторизации</a>
     </div>
 </header>

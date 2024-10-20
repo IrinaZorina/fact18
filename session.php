@@ -1,3 +1,9 @@
+<?php
+include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
+?>
+
+    <div class="TaskCycles">
+
 
 <?php
 echo 'Не стал создавать кучу новых страниц, чтобы не запутаться :)
@@ -40,16 +46,16 @@ echo '<br><br>';
 $UserGreet = isset($_POST['Name']) ? 'Hello, ' . $_SESSION['Name']  : '';
 echo $UserGreet;
 echo '<br><br><br><br><br><br>';
-$timeOfEnter = isset($_POST['Name']) ? date("F j, Y, g:i a") : '';
+$timeOfEnter = isset($_POST['Name']) ? date("H:i:s") : '';
 echo 'Время захода на сайт: ' . $timeOfEnter;
 echo '<br><br>';
 
 
 
 
-$UserTime = (isset($_SESSION['visit_time'])) ?  : time();
+$UserTime = (isset($_SESSION['visit_time'])) ?  : date("H:i:s");
 
-$TimeOfUsingSite = time() - $UserTime;
+$TimeOfUsingSite = date("H:i:s") - $UserTime;
 
 
 echo 'Пользователь был на сайте ' . $TimeOfUsingSite . ' минут';
@@ -59,4 +65,13 @@ echo 'Пользователь был на сайте ' . $TimeOfUsingSite . ' �
 session_destroy()
 */
 
+?>
+
+    </div>
+
+
+
+
+<?php
+include 'AssetsForTheSiteWithBlocks_DayNight/footer.php';
 ?>
