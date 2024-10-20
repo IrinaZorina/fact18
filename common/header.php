@@ -27,6 +27,7 @@ $style = getTimeStyle();
         <?php
         if (isset($_SESSION['login'])):
         ?>
+            <span>(<?=$_SESSION['login'];?>)</span>
             <a class="nav_item" href="logout.php">Выйти</a>
         <?php else: ?>
             <a class="nav_item" href="?page=login">Войти</a>
