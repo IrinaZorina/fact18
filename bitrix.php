@@ -13,6 +13,6 @@ $_SESSION['last_page'] = 'bitrix.php';
 <body>
     <h1>Страница о Bitrix</h1>
     <p>Здесь может быть информация о Bitrix.</p>
-    <a href="cookie_session4.php">Вернуться на главную</a>
+    <a href="cookie_session.php">Вернуться на главную</a>
 </body>
 </html>
