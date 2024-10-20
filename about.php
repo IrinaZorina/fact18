@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,6 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Приветики пистолетики!</h1>
+  <h1>Hello, <?php echo isset($_SESSION['name']) ? $_SESSION['name'] : 'user'; ?>! </h1>
 </body>
-</html>
+

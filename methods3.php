@@ -54,6 +54,6 @@
             <button type="submit">Войти</button>
         </form>
         <br><br>
-       <div class="links44"><a href="/4.php">Перейти к Заданию 4</a></div>
+       <div class="links44"><a href="/methods4.php">Перейти к Заданию 4</a></div>
     </body>
     </html>

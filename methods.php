@@ -4,9 +4,6 @@ include 'header.php';
 print_r($_GET);
 echo  "<br>";
 
-//$image = isset($_GET['image']) ? $_GET['image'] : 1;
-//echo  $image;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +31,7 @@ echo  "<br>";
   <br>
      Слайд 15 Задание 1
   <br><br>
-  <div class="links22"><a href="/2.php">Перейти к Заданию 2</a></div>
+  <div class="links22"><a href="/methods2.php">Перейти к Заданию 2</a></div>
 </body>
 </html>
 

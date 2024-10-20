@@ -55,6 +55,6 @@ displayResults($formData);
         <button type="submit">Отправить</button>
     </form>
       <br><br>
-    <div class="links33"><a href="/3.php">Перейти к Заданию 3</a></div>
+    <div class="links33"><a href="/methods3.php">Перейти к Заданию 3</a></div>
 </body>
 </html>

@@ -12,3 +12,5 @@
         </select>
         <button type="submit">Submit</button>
     </form>
+<br><br>
+  <div class="links44"><a href="/methods.php">Перейти к Заданию 1
