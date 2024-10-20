@@ -5,7 +5,7 @@
         <img src="AssetsForTheSiteWithBlocks_DayNight/Photos/avatars.jpg" alt="" width="50" height="50">
     </div>
     <?php
- 
+
 
     $AllWordsCount = $sights . " " . $FirstPicNameFirstBlock . " " . $SecondPicNameFirstBlock
             . " " . $ThirdPicNameFirstBlock . " " . $FourthPicNameFirstBlock . " " . $FirstPicNameSecondBlock
