@@ -1,5 +1,28 @@
-
 <?php
+session_start();
+function counter() {
+    session_start();
+    if (!isset($_COOKIE['counter'])) { // первый заход на страницу
+		setcookie('counter', 1);
+		$_COOKIE['counter'] = 1;
+	} else {
+		setcookie('counter', ++$_COOKIE['counter']);
+	}
+	
+	echo $_COOKIE['counter'];
+}
+$time2=date("H:i:s");
+function t() {
+    $t=time();
+    if(!$_SESSION['lastTime']) {
+        $_SESSION['lastTime']=$t-time();
+    }
+    else {
+        $_SESSION['lastTime']= time() - $_SESSION['lastTime']; 
+    }
+   return $_SESSION['lastTime'];
+}
+$_SESSION["time"]=$time2;
 $time = date("H");
 $background_color = "blue";
 if($time>20 && $time<8) $background_color;
@@ -9,6 +32,16 @@ include "header.html";
     <main>
         <section>
             <img class="photo" src="assets/images/efb2a807-0c89-40e9-a274-d6dbd9805a47.jfif">
+            <form action="" method="$_GET">
+                <label for="color">Выберите цвет сайта</label>
+                <select name="color" id="color">
+                    <option value="red">Красный</option>
+                    <option value="green">Зеленый</option>
+                    <option value="blue" selected>Синий</option>
+                </select>
+                <input type="submit">
+            </form>
+            <button type="submit" name="destroy" value="destroy">удалить сессию</button>
         </section>
         <section>
             <h1>Соколова Анастасия</h1>
@@ -59,6 +92,9 @@ include "header.html";
           <img src="assets/images/vlad.jpg" alt=""><p class="text">текст</p>
       </div>
     </section>
+            <h1>Вы посещали страницу <?counter();?>раз</h1> 
+            <h1>Вы посещали страницу в <?=$_SESSION["time"];?></h1>
+            <h1>Вы посещали страницу <?echo t();?>секунд назад</h1>
 <?php   
 $str= "Всем привет! Я работаю в компании системным администратором.
 Увлекаюсь гитарой немного. Люблю сидеть за компьютером.
@@ -78,10 +114,20 @@ $str= "Всем привет! Я работаю в компании систем
        }
 
     echo color();
+
+   $colors= isset($_GET["value"]) ? $_GET["value"] : "blue";
+   $_SESSION["value"] = $colors;
+   print_r($_SESSION);
+   if (isset($_GET["destroy"])) {
+    session_destroy();
+   }
+    else {
+        return "";
+    }
 ?>
 <style type="text/css">
   body {
-    background-color: <?php echo $background_color?>;
+    background-color: <?php echo  $_SESSION["value"]?>;
   }
   .word {
     color:brown;

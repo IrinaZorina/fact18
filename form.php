@@ -4,8 +4,9 @@ $users =[
     "admin" => "12345",
     "user" => "1256"
 ];
+$login=$_POST["login"];
+setcookie("login",$login,time()+3600);
 ?>
-
 <form action="" method="POST">
     <p>Логин<select name="login">
         <?php
