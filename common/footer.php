@@ -16,7 +16,7 @@
     <div>
         <?php
         if (isset($_SESSION['login'])) {
-            echo "Вы были на странице: {$_COOKIE['visit']} раз";
+            echo "Вы были на странице: {$visit} раз";
         }
         ?>
     </div>
