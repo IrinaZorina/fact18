@@ -19,15 +19,15 @@ $style = getTimeStyle();
         <img src="assets/images/logo.svg" alt="Логотип Факт.Академия">
     </a>
     <nav>
-        <a class="nav_item" href="?page=mendeleev">Менделеев</a>
-        <a class="nav_item" href="?page=loop">Циклы</a>
-        <a class="nav_item" href="?page=array">Массивы</a>
-        <a class="nav_item" href="?page=string">Строки</a>
-        <a class="nav_item" href="?page=functions">Функции</a>
+        <a class="nav_item" href="/index.php?page=mendeleev">Менделеев</a>
+        <a class="nav_item" href="/index.php?page=loop">Циклы</a>
+        <a class="nav_item" href="/index.php?page=array">Массивы</a>
+        <a class="nav_item" href="/index.php?page=string">Строки</a>
+        <a class="nav_item" href="/index.php?page=functions">Функции</a>
         <?php
         if (isset($_SESSION['login'])):
         ?>
-            <span>(<?=$_SESSION['login'];?>)</span>
+            <span>(<a href="profile.php" title="Страница профиля"><?=$_SESSION['login'];?></a>)</span>
             <a class="nav_item" href="logout.php">Выйти</a>
         <?php else: ?>
             <a class="nav_item" href="?page=login">Войти</a>
