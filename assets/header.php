@@ -27,5 +27,6 @@ if ($time > 20 || $time < 8) {
         <a href="../form.php" target="_blank" class="text_nav"><b>Формы</b></a>
         <a href="../function.php" target="_blank" class="text_nav"><b>Функции</b></a>
         <a href="../table.php" target="_blank" class="text_nav"><b>Таблица Менделеева</b></a>
+        <a href="../enter.php" target="_blank" class="text_nav"><b>Войти</b></a>
     </nav>
     </header>

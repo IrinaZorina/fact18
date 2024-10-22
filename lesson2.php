@@ -1,49 +1,71 @@
 <?php
-function f($i,$j){
-    if($i<$j){
-        return $j . '<br>';
+$str=fopen('read.txt', 'r');
+
+$str2=fread($str, 1);
+//echo $str;
+while ($str2 != null){
+    if ($str2=="H"){
+        echo 'h';
     }
-    else{
-        return $i . '<br>';
+    elseif ($str2=="\n"){
+
     }
-}
-$i=5;
-$j=9;
-$n=f($i,$j);
-echo $n;
-{
+    elseif ($str2=="\r"){
 
-}
-function gipotenuza($a, $b)
-{
- return  sqrt(pow($a,2) + pow($b,2));
-};
-    $a=4;
-    $b=5;
-    $c=gipotenuza($a,$b);
-echo $c;
-echo "<br>";
-
-function ten($d)
-{for($d=10; $d<=10000000; $d=$d*10){
-    if($d<=1000000){
-        echo $d . '<br>';
     }
-    else{
-        echo 'вы достигли предела' . '<br>';
-    }
+    else{echo $str2 . '<br>';}
+
+    $str2=fread($str, 1);
 }
+$str=file(
+    'read.txt');
+print_r($str);
+$str2=file_get_contents('read.txt');
+echo $str2;
+?>
 
-}
-ten(10);
+<?php
+print_r($_FILES);
+$temp = $_FILES['my_file']['tmp_name'];
+echo $temp;
+$name = $_FILES['my_file']['name'];
 
-function aa()
-{
+$path = 'upload/' . $name;
 
-}
+move_uploaded_file($temp, $path);
+
+//file_put_contents('hello.txt', 'Hello, world! I`m  Tatiana');
+//mkdir('test');
+
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+    <input type="text" name="name">Введите имя
+    <input type="file" name="my_file">Выберите файл
+    <input type="submit">
+
+</form>
+</body>
+</html>
 
 
 
+
+
+
+
+
+<?php
 
 /*function sum($a){
     $a +=10;

@@ -25,6 +25,7 @@ h1,h2{
     text-align: center;
     margin: 100px 50px 50px
 }
+
 .A { grid-area: f; }
 .B { grid-area: i; }
 .C { grid-area: j; }
