@@ -11,18 +11,15 @@ include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
 
 //Принимаем из POST выбранный пользователем цвет и передаем его в переменную b
 $b = '';
-
-if ($_POST["PageColor"] == 'Red') {
-    $b = "AssetsForTheSiteWithBlocks_DayNight/AdditionalCssFiles/Red.css";
-}
-
-elseif ($_POST["PageColor"] == "Blue") {
-    $b = "AssetsForTheSiteWithBlocks_DayNight/AdditionalCssFiles/blue.css";
-}
-elseif ($_POST["PageColor"] == "Yellow") {
+if (isset($_POST["PageColor"])) {
+    if ($_POST["PageColor"] == 'Red') {
+        $b = "AssetsForTheSiteWithBlocks_DayNight/AdditionalCssFiles/Red.css";
+    } elseif ($_POST["PageColor"] == "Blue") {
+        $b = "AssetsForTheSiteWithBlocks_DayNight/AdditionalCssFiles/blue.css";
+    } elseif ($_POST["PageColor"] == "Yellow") {
         $b = "AssetsForTheSiteWithBlocks_DayNight/AdditionalCssFiles/Yellow.css";
+    }
 }
-
 $ColorOfPage = $b;
 //Задаем куку с цветом, который выбрал пользователь
 
@@ -110,7 +107,7 @@ echo '<br><br><br>';
 echo '<br><br><br>';
 echo 'Последняя посещенная страница: ';
 echo '<br><br><br>';
-//Создаем сессию и записывааем в нее последнюю посещенную страницу через сессию 
+//Создаем сессию и записывааем в нее последнюю посещенную страницу через сессию
 
 session_start();
 $lastPage = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : 'неизвестна';

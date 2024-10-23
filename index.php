@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
 ?>
 
@@ -46,16 +47,29 @@ include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
 
         </div>
     <div class="AboutCourse">
-        <?php
-        $InfoAboutCourse = 'Все понравилось. Все понравилось.Все понравилось. Все понравилось.
-        Все понравилось. Все понравилось.Все понравилось. Все понравилось';
-        ?>
-        <div class="OddWords">
-            <?php
 
-            echo $InfoAboutCourse;
+
+<!--        <div class="OddWords">
+            </div>
+--!>
+            <?php
+            $InfoAboutCourse = 'Все понравилось. Все понравилось. Все понравилось. Все понравилось.
+            Все понравилось. Все понравилось. Все понравилось. ';
+            $ArrayOfWordsInInfoAboutCourse = explode(' ', $InfoAboutCourse);
+
+            for ($i = 0; $i <= count($ArrayOfWordsInInfoAboutCourse); $i++) {
+                if (($i % 2) == 0) {
+                    echo "<span style='color:blue'> $ArrayOfWordsInInfoAboutCourse[$i] </span>";
+
+                }
+                else {
+                echo "<span style='color:yellow'> $ArrayOfWordsInInfoAboutCourse[$i] </span>";
+                }
+            }
+
             ?>
-        </div>
+
+
         <?php
 
         function CountOddLetters($InfoAboutCourse) {
@@ -175,6 +189,23 @@ include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
     </div>
 
 </div>
+
+<?php
+
+$_SESSION['sights'] = $sights;
+$_SESSION['$FirstPicNameFirstBlock'] = $FirstPicNameFirstBlock;
+$_SESSION['$SecondPicNameFirstBlock'] = $SecondPicNameFirstBlock;
+$_SESSION['$ThirdPicNameFirstBlock'] = $ThirdPicNameFirstBlock;
+$_SESSION['$FourthPicNameFirstBlock'] = $FourthPicNameFirstBlock;
+$_SESSION['$FirstPicNameSecondBlock'] = $FirstPicNameSecondBlock;
+$_SESSION['$SecondPicNameSecondBlock'] = $SecondPicNameSecondBlock;
+$_SESSION['$ThirdPicNameSecondBlock'] = $ThirdPicNameSecondBlock;
+$_SESSION['$FourthPicNameSecondBlock'] = $FourthPicNameSecondBlock;
+
+
+
+
+?>
 
 <?php
 include 'AssetsForTheSiteWithBlocks_DayNight/footer.php';

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <footer>
 <div class="footer">
 Контакт: *-***-***-**-**
@@ -6,6 +10,16 @@
     </div>
     <?php
 
+
+    $sights = $_SESSION['sights'];
+    $FirstPicNameFirstBlock = $_SESSION['$FirstPicNameFirstBlock'];
+    $SecondPicNameFirstBlock = $_SESSION['$SecondPicNameFirstBlock'];
+    $ThirdPicNameFirstBlock = $_SESSION['$ThirdPicNameFirstBlock'];
+    $FourthPicNameFirstBlock = $_SESSION['$FourthPicNameFirstBlock'];
+    $FirstPicNameSecondBlock = $_SESSION['$FirstPicNameSecondBlock'];
+    $SecondPicNameSecondBlock = $_SESSION['$SecondPicNameSecondBlock'];
+    $ThirdPicNameSecondBlock = $_SESSION['$ThirdPicNameSecondBlock'];
+    $FourthPicNameSecondBlock = $_SESSION['$FourthPicNameSecondBlock'];
 
     $AllWordsCount = $sights . " " . $FirstPicNameFirstBlock . " " . $SecondPicNameFirstBlock
             . " " . $ThirdPicNameFirstBlock . " " . $FourthPicNameFirstBlock . " " . $FirstPicNameSecondBlock

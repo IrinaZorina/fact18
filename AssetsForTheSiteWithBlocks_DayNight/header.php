@@ -52,6 +52,9 @@ $StyleDayNightForTheSite = ChangeStyleDayNight();
     <div>
         <a href="getpost.php">Ссылка на страницу авторизации</a>
     </div>
+    <div>
+        <a href="workWithFiles.php">Ссылка на ДЗ по файлам</a>
+    </div>
 </header>
 
 </body>
