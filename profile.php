@@ -13,6 +13,15 @@ if (!isset($_SESSION['login'])) {
     exit();
 }
 
+if (isset($_COOKIE['bg_color'])) {
+    $bg_color = $_COOKIE['bg_color'];
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['bg_color'])) {
+    $bg_color =  $_POST['bg_color'];
+    setcookie("bg_color", $bg_color);
+}
+
 include_once __DIR__ . '/common/header.php';
 
 include_once __DIR__ . '/common/profile.php';

@@ -11,6 +11,15 @@
             </div>
             <div>
                 <h2>Выбрать цвет фона</h2>
+                <div>
+                    <form method="post">
+                        <label>
+                            Выберете цвет фона:
+                            <input type="color" name="bg_color" value="<?php echo $bg_color ?? "";?>">
+                        </label>
+                        <input type="submit" name="submit" value="Сохранить">
+                    </form>
+                </div>
             </div>
         </div>
     </main>

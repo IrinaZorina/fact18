@@ -12,6 +12,13 @@ $style = getTimeStyle();
     <title>Александр Торопов</title>
     <link rel="stylesheet" href="<?=$style;?>">
     <link rel="stylesheet" href="assets/css/mendeleev.css">
+    <?php if (isset($bg_color)): ?>
+    <style>
+        body {
+            background-color: <?=$bg_color?>;
+        }
+    </style>
+    <?php endif; ?>
 </head>
 <body>
 <header class="wrapper main_header border">
