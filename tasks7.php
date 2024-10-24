@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<?php
+include "header.html";
+?>
 <body>
     <form action="" method="post" enctype="multipart/form-data">
     <input type="file" name="file">
     <input type="submit">
     </form>
 </body>
-</html>
 <?php // задача про файл
 echo "<pre>";
 print_r($_FILES);
@@ -51,6 +46,6 @@ file_put_contents('3.txt', "");
             }
         }
     }
-
+include "footer.html";
 ?>
 
