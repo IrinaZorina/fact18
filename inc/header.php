@@ -1,11 +1,15 @@
 <?php
-$time = date("H");
-if ($time < 20 and $time > 8) {
-    $vremya = "../assets/css/ytro.css";
-} 
-else {
-    $vremya = "../assets/css/nochi.css";
+function smena() { //функция смены фона 
+    $time = date("H");
+    if ($time < 20 and $time > 8) {
+      $vremya = "../assets/css/ytro.css";
+    } 
+    else {
+      $vremya = "../assets/css/nochi.css";
+    }
+    return $vremya;
 }
+$changeDayNight = smena();
 ?>
 
 
@@ -20,7 +24,7 @@ else {
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="keywords" content="php, html, css, bitrix" />
     <title>Document</title>
-    <link rel="stylesheet" href="<?php echo $vremya?>"/>
+    <link rel="stylesheet" href="<?php echo $changeDayNight?>"/>
   </head>
 
   <body>
@@ -28,11 +32,11 @@ else {
             <nav class="menu">
                     <ul class="navigatia">
                         <li class="active-link"><a href="../index.php">Главная страница</a></li>
-                        <li class="Chikl"><a href="inc/cycles.php">Циклы</a></li>
-                        <li class="Massiv"><a href="#">Массивы</a></li>
-                        <li class="Stroki"><a href="#">Строки</a></li>
-                        <li class="Function"><a href="#">Функции</a></li>
-                        <li class="GET_POST"><a href="#">GET и POST</a></li>
+                        <li class="Chikl"><a href="/cycles.php">Циклы</a></li>
+                        <li class="Massiv"><a href="/array.php">Массивы</a></li>
+                        <li class="Stroki"><a href="/lines.php">Строки</a></li>
+                        <li class="Function"><a href="/functions.php">Функции</a></li>
+                        <li class="GET_POST"><a href="/get_post.php">GET и POST</a></li>
                     </ul>
                     <ul class="icons">
                         <li class="seti"><a href="https://vk.com/kot_barry"><img src="../assets/image/vk.png" height="35px" width="35px"></a></li>

@@ -178,7 +178,7 @@ if ($i == 0) {
 
 
 <?php
-    include 'footer.php';
+    include 'inc/footer.php';
 ?>
 
 </body>

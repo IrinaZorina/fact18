@@ -19,6 +19,22 @@
                 <td><p class="addres">Адрес проживания</p></td>
                 <td><p class="addres">Контакная информация</td>
                 <td><p class="addres">Социальные сети</td>
+                <td rowspan="2">
+                <?php
+                    function DateTime () { // функция разности дат
+                    $now = time();
+                    $d2 = date("j. n. Y");
+                    $my = '07. 07. 1998';
+                    $myDate = strtotime("07.07.1998");
+                    $datediff = $now - $myDate;
+
+                    echo '<br><a style="color: Gold">' . $my . ' - моя дата </a> <br>';
+                    echo '<br><a style="color: Gold">' . $d2 . ' - сегодняшняя дата </a> <br>';
+                    echo '<br><a style="color: Gold">' . floor($datediff / (60 * 60 * 24)) . ' дней - разность между датами </a> <br>';
+                    }
+                    $NewDateTime = DateTime();
+                    ?>
+                </td>
             </tr>
             <tr>
                 <td class="info">Челябинская область, город Магнитогорск, <br> улица Совесткая 176/1</td>

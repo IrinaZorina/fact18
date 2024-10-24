@@ -1,13 +1,3 @@
-<?php
-$time = date("H");
-if ($time < 20 and $time > 8) {
-    $vremya = "assets/css/ytro.css";
-} 
-else {
-    $vremya = "assets/css/nochi.css";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +9,6 @@ else {
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="keywords" content="php, html, css, bitrix" />
     <title>Document</title>
-    <link rel="stylesheet" href="<?php echo $vremya?>"/>
     <link rel="stylesheet" href="inc/header.css"/>
     <link rel="stylesheet" href="inc/footers.css"/>
   </head>
@@ -42,35 +31,51 @@ else {
     </div>
       <table id="Iam" >
         <tr class="hight">
-          <td class="shirina">Меня зовут Катя, мне 26 лет, и я живу в городе Магнитогорск. Училась в
-            МГТУ имени Носова на педагога информатики и экономики. На данный момент
-            работаю не по профессии, но два года я пропработала разработчиком
-            электронных курсов в компании Sike. У меня есть кошка (Сакура) и щенок
-            (Рокки). Рокки появился в моей семье недавно и ему всего 4 месяца. В
-            свободное время люблю гулять, смотреть сериалы или просто отдыхать!
+          <td class="shirina">
+            <?php
+              function TextArray () {     // функция изменения первого предложения     
+                $text = 'Меня зовут Катя, мне 26 лет, и я живу в городе Магнитогорск. Училась в
+                МГТУ имени Носова на педагога информатики и экономики. На данный момент
+                работаю не по профессии, но два года я пропработала разработчиком
+                электронных курсов в компании Sike. У меня есть кошка (Сакура) и щенок
+                (Рокки). Рокки появился в моей семье недавно и ему всего 4 месяца. В
+                свободное время люблю гулять, смотреть сериалы или просто отдыхать!';
+                $str = 'Меня зовут Катя, мне 26 лет, и я живу в городе Магнитогорск.';
+                $colors = 'brown';
+                $exploded = explode('/', $str);
+                  foreach ($exploded as $valye) {
+                      $text = str_replace($valye, '<b style = "color: ' . $colors . '">' . $valye . '</b>', $text);
+                  }
+                echo $text;  
+              }
+              $NewTexArray = TextArray();
+            ?>
           </td>
 
-          <td class="shirina">Мне очень понравилось, как прошли первые два урока. Все подробно и
-            понятно объясняла Ирина. Надеюсь, в дальнейшем я буду схватывать все
-            также легко!
+          <td class="shirina">
+            
+          <?php
+            function ChangeColors () { // функция изменения цветов у второго текста
+              $text2 = 'Мне очень понравилось, как прошли первые два урока. Все подробно и
+              понятно объясняла Ирина. Надеюсь, в дальнейшем я буду схватывать все
+              также легко!';
+              $words = preg_split('/\s+/', $text2);
+              $coloredText = '';
+                foreach ($words as $index => $word) {
+                  $class = $index % 2 == 0 ? 'even-word' : 'odd-word';
+                  $coloredText .= "<span class='$class'>$word</span> ";
+                }
+              echo $coloredText;
+            }
+            $NewChangeText = ChangeColors();    
+            ?>
+                  <style>
+                  .even-word { color: purple; }
+                  .odd-word { color: green; }
+                  </style>
           </td>
         </tr>
       </table>
-    <!-- <div class="textcols">
-      <div class="two">
-          Меня зовут Катя, мне 26 лет, и я живу в городе Магнитогорск. Училась в
-          МГТУ имени Носова на педагога информатики и экономики. На данный момент
-          работаю не по профессии, но два года я пропработала разработчиком
-          электронных курсов в компании Sike. У меня есть кошка (Сакура) и щенок
-          (Рокки). Рокки появился в моей семье недавно и ему всего 4 месяца. В
-          свободное время люблю гулять, смотреть сериалы или просто отдыхать!
-      </div>
-       <div class="two">
-          Мне очень понравилось, как прошли первые два урока. Все подробно и
-          понятно объясняла Ирина. Надеюсь, в дальнейшем я буду схватывать все
-          также легко!
-      </div>
-    </div> -->
 
     <h1 class="center">Породы собак</h1>
 
@@ -114,6 +119,7 @@ else {
       </div>
     </div>
     <div class="line3"></div>
+
 
         <?php
         include 'inc/footer.php';
