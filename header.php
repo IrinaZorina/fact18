@@ -17,6 +17,7 @@
         <div ><a href="/function.php"class="links">Функции</a></div>
         <div ><a href="/methods.php" class="links">Методы</a></div>
         <div ><a href="/cookie_session.php" class="links" >Куки и сессии</a></div>
+        <div ><a href="/files.php"   class="links" >Файлы</a></div>
         <div ><a href="/auth.php"   class="links" >Вход</a></div>
         
       </div>
