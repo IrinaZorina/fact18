@@ -11,5 +11,5 @@ include "header.html";
     </form>
 </body>
 <?php
-include "footer.htmtl";
+include "footer.html";
 ?>

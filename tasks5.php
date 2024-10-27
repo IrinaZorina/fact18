@@ -1,7 +1,7 @@
 <?php
 include "header.html";
-$_POST["password"]= md5($_POST["password"]);
-$login=$_POST["login"];
+isset($_POST["password"])? md5($_POST["password"]) : "";
+isset($login) ? $_POST["login"] : "";
 echo $_POST["login"]."<br>";
 print_r($_POST);
 ?>
