@@ -1,15 +1,16 @@
 <?php
-include 'header.php'; 
-
+include 'header.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-$users = [
-    'admin' => md5('admin0000'),
-    'Yakudza' => md5('password1'),
-    'Bobr' => md5('password2')
-];
+$hostname = "MySQL-8.2";
+$username = 'Anton';
+$password = 'Anton';
+$dbname = 'Auth';
+
+$conn = mysqli_connect($hostname, $username, $password, $dbname);
+mysqli_set_charset($conn, 'utf8');
 
 $message = '';
 
@@ -20,24 +21,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     } else {
         $login = $_POST['login'] ?? '';
-        $password = $_POST['passwd'] ?? '';
+        $password = $_POST['password'] ?? '';
         $color = $_POST['color'] ?? '';
 
-        $hashed_password = md5($password);
+        // для проверки
+        //echo "Логин: $login <br>";
+        //echo "Пароль: $password <br>";
 
-        if (isset($users[$login]) && $users[$login] === $hashed_password) {
+        // Подготовленный запрос
+        $stmt = mysqli_prepare($conn, "SELECT * FROM Auth WHERE login = ? AND password = ?");
+        mysqli_stmt_bind_param($stmt, 'ss', $login, $password);
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+
+        // Проверка ошибок
+        if (!$result) {
+            echo "Ошибка выполнения запроса: " . mysqli_error($conn);
+        }
+
+        if (mysqli_num_rows($result) > 0) {
             $_SESSION['color'] = $color;
             $last_page = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : 'нет информации';
             $message = "<p>Добро пожаловать, $login! Ваша последняя посещенная страница: $last_page.</p>";
         } else {
             $message = "<p>Неверный логин или пароль!</p>";
         }
+
+        mysqli_stmt_close($stmt);
     }
 }
 
 $color = $_SESSION['color'] ?? 'white';
+mysqli_close($conn);
 ?>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -55,18 +71,11 @@ $color = $_SESSION['color'] ?? 'white';
     <p><a href="Fact.php">Fact</a></p>
     <br><br>
     <form action="" method="post">
-        <label for="login">Имя пользователя:</label>
-        <select name="login" id="login" required>
-            <option value="">Выбери пользователя</option>
-            <?php
-            foreach ($users as $user => $pass) {
-                echo "<option value=\"$user\">$user</option>";
-            }
-            ?>
-        </select>
+        <label for="Login">Имя пользователя:</label>
+        <input type="text" name="login" id="Login" required>
         <br><br>
-        <label for="passwd">Пароль:</label>
-        <input type="password" name="passwd" id="passwd" required>
+        <label for="Password">Пароль:</label>
+        <input type="password" name="password" id="Password" required>
         <br><br>
         <label for="color">Выберите цвет фона:</label>
         <select name="color" id="color">
