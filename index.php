@@ -19,7 +19,8 @@
     ?>
 </head>
 <body class="<?php echo $backColor; ?>">
-<section class="link">
+<?php require_once 'header.php'?>
+<section class="navbar1">
     <a href="tableM.html">Элемент из таблицы Менделеева</a>
     <a href="header.php">ffffffffffffffffffff</a>
 </section>
@@ -83,45 +84,4 @@
     </section>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<body>
-<div class="one">
-    <h1>Немного обо мне</h1>
-</div>
-<div class="two">
-    <img src="assets/image/photo.jpg" width="192" , height="256" alt="">
-</div>
-<div class="three">
-    <h1>Ситников Кирилл</h1>
-</div>
-<div class="four">
-    <p><big>Мне понравился подход онлайн уроков с возможностью задавать вопросы и то что рассказывают на простом и понятном языке.</big></p>
-</div>
-<div class="five">
-    <p><big>Привет! </big></p>
-</div>
--->
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+<?php require_once 'footer.php'?>
