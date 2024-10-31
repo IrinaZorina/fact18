@@ -1,0 +1,228 @@
+body{
+    text-align: center;
+    color: black;
+}
+
+table, td{
+    border: 1px solid black;
+}
+
+
+
+/*index.php*/
+
+
+@media screen and (max-width: 400px){
+    .blockOne, .blockTwo, .blockThree{
+        display: grid;
+        padding: 100px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .firstBlock, .secondBlock, .thirdBlock, .fourthBlock, .fifthBlock, .sixthBlock, .seventhBlock, .eighthBlock, .one, .two, .three, .four, .five, .link{
+        background-color: white;
+        padding: 20px;
+        margin: 20px;
+    }
+    .one{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .two{
+        grid-column: 1/3;
+        grid-row: 2/5;
+    }
+    .three{
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+    .four{
+        grid-column: 2/3;
+        grid-row: 6/7;
+    }
+    .five{
+        grid-column: 1/2;
+        grid-row: 6/7;
+    }
+    .firstBlock{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .secondBlock{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .thirdBlock{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .fourthBlock{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .fifthBlock{
+        grid-column: 1/3;
+        grid-row: 2/4;
+    }
+    .sixthBlock{
+        grid-column: 1/3;
+        grid-row: 4/6;
+    }
+    .seventhBlock{
+        grid-column: 1/3;
+        grid-row: 6/8;
+    }
+    .eighthBlock{
+        grid-column: 1/3;
+        grid-row: 8/10;
+    }
+    .firstHeader{
+        background-color: gray;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        height: 50px;
+        color: white;
+        text-align: center;
+    }
+    .secondHeader{
+        background-color: gray;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        height: 50px;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 400px){
+    .blockOne, .blockTwo, .blockThree{
+        display: grid;
+        padding: 100px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .firstBlock, .secondBlock, .thirdBlock, .fourthBlock, .fifthBlock, .sixthBlock, .seventhBlock, .eighthBlock, .one, .two, .three, .four, .five{
+        background-color: white;
+        padding: 20px;
+        margin: 20px;
+        float: left;
+    }
+    .one{
+        grid-column: 1/5;
+        grid-row: 1/2;
+    }
+    .two{
+        grid-column: 1/3;
+        grid-row: 2/5;
+    }
+    .three{
+        grid-column: 3/5;
+        grid-row: 2/3;
+    }
+    .four{
+        grid-column: 4/5;
+        grid-row: 3/5;
+    }
+    .five{
+        grid-column: 3/4;
+        grid-row: 3/5;
+    }
+    .firstBlock{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .secondBlock{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .thirdBlock{
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .fourthBlock{
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+    .fifthBlock{
+        grid-column: 1/3;
+        grid-row: 2/4;
+    }
+    .sixthBlock{
+        grid-column: 3/5;
+        grid-row: 2/4;
+    }
+    .seventhBlock{
+        grid-column: 1/3;
+        grid-row: 4/6;
+    }
+    .eighthBlock{
+        grid-column: 3/5;
+        grid-row: 4/6;
+    }
+    .firstHeader{
+        background-color: gray;
+        grid-column: 1/5;
+        grid-row: 1/2;
+        height: 50px;
+        color: white;
+        text-align: center;
+    }
+    .secondHeader{
+        background-color: gray;
+        grid-column: 1/5;
+        grid-row: 1/2;
+        height: 50px;
+        color: white;
+    }
+}
+.day{
+    background-color: gray;
+}
+.night{
+    background-color: black;
+}
+/*index.php*/
+
+
+/* tableM.html */
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    text-align: center;
+    align-items: center;
+}
+.nameElementsShort{
+    background-color: #c8b28f;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding: 9.3%;
+}
+.nameElements{
+    background-color: #c8b28f;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+.serialNumber{
+    background-color: #c8b28f;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.atomicMass{
+    background-color: #c8b28f;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+/*header.php*/
+
+.navbar1{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+
+/*header.php*/
+
+
+
+
+
