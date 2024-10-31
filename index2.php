@@ -10,7 +10,7 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    <h1>Привет, <?=isset($_SESSION["name"]) ?  $_SESSION["name"] : "user";?></h1>
+    <h1>Привет, <?=isset($_SESSION["login"]) ?  $_SESSION["login"] : "user";?></h1>
     <h1>Последня страница посещена <?=isset($_SESSION["page"]) ?  $_SESSION["page"] : "не посещали";?></h1>
 
 </body>

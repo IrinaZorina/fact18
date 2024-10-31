@@ -32,7 +32,7 @@ include "header.html";
     <main>
         <section>
             <img class="photo" src="assets/images/efb2a807-0c89-40e9-a274-d6dbd9805a47.jfif">
-            <form action="" method="$_GET">
+            <form action="" method="GET">
                 <label for="color">Выберите цвет сайта</label>
                 <select name="color" id="color">
                     <option value="red">Красный</option>
