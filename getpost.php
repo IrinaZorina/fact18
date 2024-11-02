@@ -7,6 +7,27 @@ include 'AssetsForTheSiteWithBlocks_DayNight/header.php';
 
 
 <?php
+session_start();
+//Получаем Post-ом с формы логин и пароль пользователя и добавляем их в класс
+// UserAutorizationData (который хранит логины и пароли)
+include 'UserAutorizationData.php';
+$UserAutorizationLogPass = new UserAutorizationData();
+$UserAutorizationLogPass-> login = $_POST['login'];
+$UserAutorizationLogPass-> password = $_POST['password'];
+
+
+// Проверял, что положилось в объект var_dump($UserAutorizationLogPass);
+
+
+//записали в переменные полученные данные пользователя
+$LogOfUser = $UserAutorizationLogPass->login;
+$PassOfUser = $UserAutorizationLogPass->password;
+
+
+//положили эти переменные в сессию
+$_SESSION['login']=$LogOfUser;
+$_SESSION['password']=$PassOfUser;
+
 
 
 //Принимаем из POST выбранный пользователем цвет и передаем его в переменную b
@@ -109,9 +130,10 @@ echo 'Последняя посещенная страница: ';
 echo '<br><br><br>';
 //Создаем сессию и записывааем в нее последнюю посещенную страницу через сессию
 
-session_start();
+
 $lastPage = isset($_SESSION['last_page']) ? $_SESSION['last_page'] : 'неизвестна';
 echo $lastPage;
+
 
 ?>
 
