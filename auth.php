@@ -62,7 +62,7 @@ class Auth {
             $user = mysqli_fetch_assoc($result);
             $hashedPassword = $user['password'] ?? '';
 
-            // Проверка пароля
+           
             if ($hashedPassword && password_verify($password, $hashedPassword)) {
                 $_SESSION['color'] = $color;
                 $last_page = $_SESSION['last_page'] ?? 'нет информации';
@@ -91,7 +91,6 @@ class Auth {
     }
 }
 
-// Инициализация
 $db = new Database();
 $auth = new Auth($db);
 
