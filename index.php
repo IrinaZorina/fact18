@@ -114,7 +114,7 @@ echo $coloredText;
 </style>
 
 			</div>
-			<br />
+			<br>
 			<div class="table3">
 				<div class="ti">
 					<div class="child1"></div>

@@ -1,49 +1,93 @@
 <?php
-include 'header.php'; 
 
-$hostname = "MySQL-8.2";
-$username = 'Anton';
-$password = 'Anton';
-$dbname = 'Auth';
+include 'header.php';
 
-$conn = mysqli_connect($hostname, $username, $password, $dbname);
-mysqli_set_charset($conn, 'utf8');
+class Database {
+    private $hostname = "MySQL-8.2";
+    private $username = "Anton";
+    private $password = "Anton";
+    private $dbname = "Auth";
+    private $conn;
+
+    public function __construct() {
+        $this->connect();
+    }
+
+    private function connect() {
+        $this->conn = mysqli_connect($this->hostname, $this->username, $this->password, $this->dbname);
+        if (!$this->conn) {
+            die("Ошибка подключения к базе данных: " . mysqli_connect_error());
+        }
+        mysqli_set_charset($this->conn, 'utf8');
+    }
+
+    public function getConnection() {
+        return $this->conn;
+    }
+
+    public function closeConnection() {
+        if ($this->conn) {
+            mysqli_close($this->conn);
+        }
+    }
+}
+
+class Registration {
+    private $db;
+    private $conn;
+    public $message = '';
+
+    public function __construct(Database $db) {
+        $this->db = $db;
+        $this->conn = $db->getConnection();
+    }
+
+    public function register($login, $password) {
+        if (empty($login) || empty($password)) {
+            $this->message = 'Необходимо заполнить все поля!';
+            return false;
+        }
+
+       $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $insertQuery = "INSERT INTO Auth (login, password) VALUES (?, ?)";
+        $stmt = mysqli_prepare($this->conn, $insertQuery);
+        mysqli_stmt_bind_param($stmt, 'ss', $login, $hashedPassword);
+
+        if (mysqli_stmt_execute($stmt)) {
+            $this->message = 'Вы успешно зарегистрированы!';
+            mysqli_stmt_close($stmt);
+            return true;
+        } else {
+            $this->message = 'Ошибка регистрации: ' . mysqli_error($this->conn);
+            mysqli_stmt_close($stmt);
+            return false;
+        }
+    }
+}
+
+$db = new Database();
+$registration = new Registration($db);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $login = $_POST['Login'] ?? '';
-    $password = $_POST['password'] ?? ''; 
+    $password = $_POST['password'] ?? '';
+    $registration->register($login, $password);
 }
 
-if (empty($login) || empty($password)) {
-    echo 'Необходимо заполнить все поля!';
-} else {
- 
-    $insert_query = "INSERT INTO Auth (login, password) VALUES (?, ?)";
-    
-    $stmt = mysqli_prepare($conn, $insert_query);
-    mysqli_stmt_bind_param($stmt, 'ss', $login, $password);
+$db->closeConnection();
 
-    if (mysqli_stmt_execute($stmt)) {
-        echo 'Вы зарегистрированы!';
-    } else {
-        echo 'Ошибка: ' . mysqli_error($conn);
-    }
-
-    mysqli_stmt_close($stmt);
-}
-
-mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Регистрация</title>
 </head>
 <body>
-  <br><br>
+    <?php if (!empty($registration->message)) echo $registration->message; ?>
+    <br><br>
     <form action="" method="post">
         <label for="Login">Имя пользователя:</label>
         <input type="text" name="Login" id="Login" required>
