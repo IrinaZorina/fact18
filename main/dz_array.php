@@ -1,5 +1,61 @@
 <?php
-// 1
+
+
+$currentHour = (int) date('H');
+$isDayTime = true;
+
+if ($currentHour < 8 || $currentHour > 20) {
+    $isDayTime = false;
+}
+
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/picture.css">
+</head>
+<body class="<?=$isDayTime ? 'light-theme' : 'dark-theme'?>">
+
+
+<header>
+    <nav>
+        <ul class="transition">
+            <li class="transition1">
+                <a href="../main/Mendeleev.html" title="переход на страницу ячейки таблицы Менделеева">Ячейка водорода</a>
+            </li>
+            <li class="transition1">
+                <a href="cirkle.php" title="Переход на циклы">Циклы</a>
+            </li>
+            <li class="transition1">
+                <a href="dz_array.php"  title="Переход на массивы"> Массивы </a>
+            </li>
+            <li class="transition1">
+                <a href="../main/string.php" title="Переход на страницу со строками"> Строки </a>
+            </li>
+            <li class="transition1">
+                <a href="../main/function.php" title="Переход на страницу с функциями"> Функции </a>
+            </li>
+            <li class="transition1">
+                <a href="../main/GET_POST.php" title="Переход на страницу с методами запроса"> Запросы GET и POST </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="create-line"></div>
+
+</header>
+<p></p>
+</html>
+
+
+<div class="homeWork">Задание 1
+<?php
 $sum = 0;
 $number = array(50 , 45, 40, 35, 30);
 
@@ -7,9 +63,10 @@ for ($i = 0; $i < count($number); $i++) {
     $sum = $sum + $number[$i];
 };
 echo $sum;
-
-echo '<br>';
-// 2
+    ?>
+</div>
+<br>
+<div class="homeWork">Задание 2 <?php
 $randomArray = [];
 for ($i = 0; $i < 10; $i++) {
     $randomArray[$i] = mt_rand(0, 50);
@@ -26,14 +83,17 @@ for ($i = count($randomArray)-1; $i >= 0; $i--){
 //    echo "$var";
 //    $var--;
 //}
-
-//3
+?>
+</div>
+<div class="homeWork"> Задание 3
+    <?php
 $arr = ['1.png', '2.png', '3.png'];
 $i = mt_rand(0, 2);
-echo "<img src = 'img/$arr[$i]'  alt='$arr[$i]'>";
-
-//4
-
+echo "<img src = '../img/$arr[$i]'  alt='$arr[$i]'>";
+?>
+</div>
+<div>
+<?php
 //$natNumber = [];
 //for ($i = 0; $i < 10; $i++) {
 //    $natNumber[$i] = mt_rand(-100, 100);
@@ -60,9 +120,11 @@ echo "<img src = 'img/$arr[$i]'  alt='$arr[$i]'>";
 //echo "$minPlus = minimal Plus";
 //echo "<br>";
 //echo "$maxNeg = max nega";
+?>
+</div>
 
-
-//5
+<div class="homeWork"> Задание 5
+    <?php
 $sumMath = 0;
 $midMath = 0;
 $sumPhysics = 0;
@@ -104,75 +166,33 @@ for ($i = 0; $i < count($lesson["compScince"]); $i++) {
 }
 echo "<br> Сумма оценок по химии = $sumcompScince ";
 echo "средняя оценка по химии = $midcompScince ";
-
-// 6
-
-$island = [
-    "firstIs" => [
-        "name" => "Куба",
-        "midTemp" => 42,
-        "maxTemp" => 0,
-    ],
-    "secondIs" => [
-        "name" => "Тринидад",
-        "midTemp" => 44,
-        "maxTemp" => 0
-    ],
-    "thirdIs" => [
-        "name" => "Ямайка",
-        "midTemp" => 40,
-        "maxTemp" => 0
-    ],
-    "fourIs" => [
-        "name" => "Гаити",
-        "midTemp" => 48,
-        "maxTemp" => 0
-    ],
-];
-
-$maxTemp = [56, 52, 58, 60];
-$month = ["Июль", "Август", "Июнь"];
-
-$maxtempIsland = [
-    "islandKuba" => [
-        "name" => $island["firstIs"]["name"],
-        "midTemp" => $island["firstIs"]["midTemp"],
-        "maxTemp" => $maxTemp[0],
-        "month" => $month[0]
-    ],
-
-];
-$maxtempIsland[] = [
-    "islandTrinidad" => [
-        "name" => $island["secondIs"]["name"],
-        "midTemp" => $island["secondIs"]["midTemp"],
-        "maxTemp" => $maxTemp[1],
-        "month" => $month[2]
-    ],
-
-];
-$maxtempIsland[] = [
-    "islandJamaika" => [
-        "name" => $island["thirdIs"]["name"],
-        "midTemp" => $island["thirdIs"]["midTemp"],
-        "maxTemp" => $maxTemp[2],
-        "month" => $month[1]
-    ],
-
-];
-$maxtempIsland[] = [
-    "islandGaiti" => [
-        "name" => $island["fourIs"]["name"],
-        "midTemp" => $island["fourIs"]["midTemp"],
-        "maxTemp" => $maxTemp[3],
-        "month" => $month[0]
-    ],
-
+?>
+</div>
+<div class="homeWork"> Задание 6
+<?php
+$date = [
+    'Куба' => ['Май' => 34, 'Июнь' => 36, 'Июль' => 42, 'Агуст' => 41, 'Сентябрь' => 40],
+    'Тринидад' => ['Май' => 35, 'Июнь' => 37, 'Июль' => 43, 'Агуст' => 44, 'Сентябрь' => 42],
+    'Ямайка' => ['Май' => 36, 'Июнь' => 38, 'Июль' => 44, 'Агуст' => 45, 'Сентябрь' => 43],
+    'Гаити' => ['Май' => 33, 'Июнь' => 35, 'Июль' => 40, 'Агуст' => 43, 'Сентябрь' => 41],
 ];
 echo "<pre>";
-var_dump ($maxtempIsland);
+var_dump ($date);
 echo "</pre>";
-// 7
+$maxTemp = [];
+$maxMonth = [];
+foreach ($date as $island => $month) {
+    $maxTemp = max($month);
+    $maxMonth = array_search($maxTemp, $month);
+    $maxTemp[$island] = ['Месяц' => $maxMonth, 'Максимальная температура' => $maxTemp];
+}
+echo '<pre>';
+print_r($maxTemp);
+echo '</pre>';
+    ?>
+</div>
+<div class="homeWork"> Задание 7
+    <?php
 $arr = [];
 for ($i = 0; $i < 5; $i++) {
     for ($j = 0; $j < 6; $j++) {
@@ -185,7 +205,8 @@ echo '</pre>';
 $re1 = 1;
 $re2 = 1;
 $re3 = 1;
-
+?>
+</div>
 
 
 

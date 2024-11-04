@@ -1,4 +1,6 @@
 <?php
+
+include_once 'header.php';
 // слайд 14 1 задание
 function sr ($a = 14 , $b = 5) {
     if ($a > $b) {

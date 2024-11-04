@@ -1,4 +1,7 @@
 <?php
+
+
+
 //$a = mt_rand(1, 10);
 //$b = mt_rand(1, 10);
 //
@@ -74,17 +77,24 @@
 //}
 
 //include_once 'about.php';
-//?>
+
+include_once 'header.php';
+
+?>
 <!doctype html>
-<html lang="en">
+<lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
 </head>
 <body>
+<div>
+<div class="homeWorkCirkle">
 выберите год
 <select>
     <?php
@@ -92,7 +102,8 @@
         echo "<option> $a </option>";
     ?>
 </select>
-
+</div>
+<div class="homeWorkCirkle"
 23 слайд задание 1
 
 <?php
@@ -102,8 +113,10 @@
      }
  }
 ?>
+</div>
 <br>
 <br>
+<div class="homeWorkCirkle"
 23 слайд задание 2
 <?php
 for ($i = 1; $i < 50; $i++) {
@@ -116,12 +129,12 @@ for ($i = 1; $i < 50; $i++) {
     }
 }
 ?>
-
+</div>
 <br><br>
 <?php
 
 ?>
-
+<div class="homeWorkCirkle">
 <br>
 23 слайд задание 4
 <?php
@@ -133,6 +146,8 @@ for ($i = 1, $j = 1; $sum < 10; $i += 3 , $j++) {
 }
 echo "количество повторений = $j";
 ?>
+</div>
+
 23 слайд задание 3
 <?php
 //$sumPI = 0;
@@ -148,7 +163,7 @@ echo "количество повторений = $j";
 
 
 
-
+<div class="homeWorkCirkle">
 <br><br>
 24 слайд задание 1
 <pre>
@@ -166,8 +181,9 @@ while ($randomNumber != 0) {
 echo "сумма чисел = $sum1 ";
 
 ?>
+</div>
 </pre>
-
+<div class="homeWorkCirkle">
 <br><br>
 Слайд 25 задание 1
 <?php 
@@ -178,8 +194,9 @@ for ($i=0; $i < 20 ; $i++) {
 }
 
 ?>
-
+</div>
 <br><br>
+<div class="homeWorkCirkle">
 Слайд 25 задание 2
 <?php
 //$number2 = 1000;
@@ -203,7 +220,7 @@ echo $repeats;
 echo '</pre>';
 
 ?>
-
+</div>
 <br><br>
 
 <?php
@@ -212,14 +229,15 @@ echo '</pre>';
 ?>
 
 <br><br>
-
+<div class="homeWorkCirkle">
 <?php
 $i = 5;
 for ($n = 0; $n <= (10 - $i); $n++) {
     echo "$n<br>";
 }
 ?>
-
+</div>
+<div class="homeWorkCirkle">
 <?php
 $pi = 0;
 $t = 0.01;
@@ -234,7 +252,7 @@ while (abs($pi - M_PI) >= 0.01){
 }
 echo "min slag - $count";
 ?>
-
+</div>
 
 
 
