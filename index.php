@@ -31,8 +31,9 @@ include "header.html";
 ?>
     <main>
         <section>
-            <img class="photo" src="assets/images/efb2a807-0c89-40e9-a274-d6dbd9805a47.jfif">
-            <form action="" method="GET">
+            <h1>Выберите цвет</h1>
+            <img class="photo" src="assets/images/efb2a807-0c89-40e9-a274-d6dbd9805a47.jfif" alt="">
+            <form action="index.php" method="GET">
                 <label for="color">Выберите цвет сайта</label>
                 <select name="color" id="color">
                     <option value="red">Красный</option>
@@ -60,8 +61,9 @@ include "header.html";
         </section>
     </main>
 
-    <h1>Спортивные машины</h1>
+  
     <section class="container">
+    <h1>Спортивные машины</h1>
       <div class="car">
           <img src="assets/images/fer.jpg" alt=""><p class="text">текст</p>
       </div>
@@ -77,8 +79,8 @@ include "header.html";
     </section>
   
   
-      <h1>Города России</h1>
     <section class="containerTown">
+    <h1>Города России</h1>
       <div class="town">
           <img src="assets/images/ekb.jfif" alt=""><p class="text">текст</p>
       </div>

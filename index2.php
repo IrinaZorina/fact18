@@ -12,6 +12,6 @@ session_start();
 <body>
     <h1>Привет, <?=isset($_SESSION["login"]) ?  $_SESSION["login"] : "user";?></h1>
     <h1>Последня страница посещена <?=isset($_SESSION["page"]) ?  $_SESSION["page"] : "не посещали";?></h1>
-
+   
 </body>
 </html>

@@ -78,7 +78,7 @@ ul {
     padding: 0;
     display: flex;
 }
-.menu {
+.nav {
     text-decoration: none;
     display: inline-block;
     margin-right: 20px;
@@ -134,7 +134,7 @@ footer {
 .youtube a:hover {background: #c4302b;}
 
 
-@media screen and(min-width:400px){
+@media (min-width:400px){
     .container {
         flex-wrap: wrap;
         width: 350px;
@@ -153,7 +153,7 @@ footer {
     
 }
 
-@media screen and(min-width:800px){
+@media (min-width:800px){
     .container {
         flex-wrap: wrap;
         width: 750px;
@@ -163,7 +163,7 @@ footer {
     }
     .town img {
         width: 200px;
-        height: 200px;
+        height: 200px
     }
 }
 

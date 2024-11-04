@@ -1,6 +1,7 @@
 <?php
 session_start();
 include  "header.html";
+include "Auth.php";
 ?>
 <div class="form">
 <form action="" name ="auth" method="POST">
@@ -21,7 +22,12 @@ include  "header.html";
 </form>
 </div>
 <?php
-$hostname="localhost";
+
+$form=new Auth("localhost","fact18","fact18","users",'index2.php',"users");
+$form->connect('$login','$password');
+
+
+/*$hostname="localhost";
 $username="fact18";
 $password="fact18";
 $dbname="users";
@@ -63,7 +69,6 @@ function reg($login,$password) {
             }  
         }
     }
-   
 
 function auth($login,$password) {
     global $arr;
@@ -90,7 +95,10 @@ function auth($login,$password) {
     }
 reg('$login','$password');
 auth('$password','$login');
+*/
 include "footer.html";
+
+
 ?>
 
 
