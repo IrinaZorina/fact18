@@ -18,6 +18,9 @@ if (isset($_COOKIE['bg_color'])) {
 // подключаем основной файл с функциями
 require_once __DIR__ . '/core/functions.php';
 
+// подключаем файл соединения с базой данных
+require_once __DIR__ . '/db/connect.php';
+
 include_once __DIR__ . '/common/header.php';
 
 switch ($page) {
