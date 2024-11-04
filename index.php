@@ -20,10 +20,7 @@
 </head>
 <body class="<?php echo $backColor; ?>">
 <?php require_once 'header.php'?>
-<section class="navbar1">
-    <a href="tableM.html">Элемент из таблицы Менделеева</a>
-    <a href="header.php">ffffffffffffffffffff</a>
-</section>
+
 <section class="blockOne">
     <section class="one">
         <div class="one"> Немного обо мне</div>

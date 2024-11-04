@@ -104,7 +104,7 @@ table, td{
         background-color: white;
         padding: 20px;
         margin: 20px;
-        float: left;
+        float: right;
     }
     .one{
         grid-column: 1/5;

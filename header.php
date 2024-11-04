@@ -32,6 +32,8 @@
                     <a href="functions.php">Функции</a>
                     <a href="getpost.php">Get и Post</a>
                     <a href="cookiesession.php">COOKIE и SESSION</a>
+                    <a href="tableM.html">Элемент из таблицы Менделеева</a>
+                    <a href="Files.php">Работа с файлами</a>
                 </ul>
                 <ul>
                     <a href="#">VK</a>
