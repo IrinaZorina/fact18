@@ -1,6 +1,5 @@
+
 <?php include 'assets/header.php' ?>
-
-
     <div class="container">
         <div class="A ava"><img src="assets/images/ava.jpg" alt="фото"></div>
         <div class="B"><h1>Татьяна Вареникова</h1></div>
@@ -81,7 +80,6 @@ else{
             <div><h3>Скала парус</h3></div>
         </div>
     </div>
-
 
 <?php include 'assets/footer_calculation.php'?>
 

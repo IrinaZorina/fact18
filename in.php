@@ -1,3 +1,5 @@
+
+<?php include 'assets/header.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +7,10 @@
     <title>Title</title>
 </head>
 <body>
-<img src="assets/images/ok.png" alt="" >
+
 <h1>Доступ к секретным страницам открыт</h1>
+
 
 </body>
 </html>
+<?php include 'assets/footer.php'?>

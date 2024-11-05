@@ -1,5 +1,4 @@
-<?php
-?>
+<?php include 'assets/header.php'?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+<body><p>
 <form>
     <select name="l" action="" metod="get">
         <option name="lab" value="">не выбрано
@@ -18,6 +17,7 @@
         <option name="lab" value="3">Лаб3
         <option name="lab" value="4">Лаб4
         <input type="submit">
-</form>
+</form></p>
 </body>
 </html>
+<?php include 'assets/footer.php'?>

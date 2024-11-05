@@ -1,3 +1,4 @@
+<?php include 'assets/header.php'?>
 <?php
 print_r($_POST);
 echo "<br>";
@@ -14,15 +15,17 @@ $_POST=null;
  //   'admin'=>'21232f297a57a5a743894a0e4a801fc3'];
 if ($login=='user'&& $password=='ee11cbb19052e40b07aac0ca060c23ee')
 {
-    $l='in.html';
+    $l='in.php';
+    header('Location: ' . $l);
+
 }
 elseif ($login=='manager'&& $password=='1d0258c2440a8d19e716292b231e3190')
 {
-    $l='in.html';
+    $l='in.php'; header($l);
 }
 elseif ($login=='admin'&& $password=='21232f297a57a5a743894a0e4a801fc3')
 {
-    $l='in.html';
+    $l='in.php'; header($l);
 }
 else{
     $l=null;
@@ -38,7 +41,7 @@ else{
     <title>Document</title>
 </head>
 <body>
-<form action="<?php echo $l;?>" method="post">
+<form action="<?php header('Location: ' . $l); echo $l;?>" method="post">
     Логин <select name="login">
         <option value="">выберите логин</option>
     <option value="user">user</option>
@@ -50,3 +53,4 @@ else{
 </form>
 </body>
 </html>
+<?php include 'assets/footer.php'?>

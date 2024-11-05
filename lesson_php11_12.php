@@ -1,3 +1,4 @@
+<?php include 'assets/header.php'?>
 <?php
 $name1 = isset($_POST['name1']) ? $_POST['name1'] : '';
 $delivery = isset($_POST['delivery']) ? $_POST['delivery'] : '';
@@ -74,3 +75,4 @@ $password = isset($_POST['password']) ? $_POST['password'] = (md5($_POST['passwo
 <a href="phpcourse.php">перейти на страницу c формой</a>
 </body>
 </html>
+<?php include 'assets/footer.php'?>
