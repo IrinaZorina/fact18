@@ -14,46 +14,18 @@ echo mb_substr($str3 , 0, 13);
 
 echo "<br>";
 //  задание 4
+$string1 = file('file1.txt');
+$string2 = file('file2.txt');
 
-$str1 = file('file1.txt');
-$str4 = file('file2.txt');
-echo "<br>";
+$array=array_merge($string1,$string2);
+$res = array_diff($array, array_diff_assoc($array, array_unique($array)));
+file_put_contents("3.txt",$res);
 
-print_r($str1);
-echo "<br>";
-
-print_r($str4);
-echo "<br>";
-
-$str5 = in_array($str1, $str4);
-
-if (!empty($str5)) {
-    file_put_contents('file3.txt', implode(' ', $str5, FILE_APPEND));
-    echo 'Новая запись сохранена в file3.txt';
-} else {
-    echo 'Не удалось сохранить';
-}
-echo "<br>";
 
 // задание 5
 
-$file1 = file_get_contents('file1.txt');
-$file2 = file_get_contents('file2.txt');
-
-$arr1 = explode('.', $file1);
-$arr2 = explode('.', $file2);
-
-$arr1 = array_filter(array_map('trim', $arr1));
-$arr2 = array_filter(array_map('trim', $arr2));
-
-$arr3 = array_intersect($arr1, $arr2);
-
-if (!empty($arr3)) {
-	file_put_contents('file3.txt', implode(' . ', $arr3) . '.');
-	echo 'Повторы слов записаны в file3.txt';
-} else {
-	echo 'повторов нет';
-}
+$res2=array_intersect($string1,$string2);
+file_put_contents("4.txt",$res2);
 
 
 

@@ -27,6 +27,11 @@ include_once 'header.php';
 
 		<input type="submit">
 
+        <br>
+        <br>
+
+            <a href="lab0.php" >Задание с лабораторными</a>
+
 	</form>
 
 </body>

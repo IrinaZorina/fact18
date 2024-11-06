@@ -1,4 +1,5 @@
 <?php
+session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -11,15 +12,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<form class="authBox" action="login.php" method="post">
+<form class="authBox" action="/aboutReg.php" method="post" >
     <label>Логин</label>
     <input class="inputBlock" type="text" name="login">
     <label>Пароль</label>
     <input class="inputBlock" type="password" name="password">
+    <label>Повторите пароль</label>
+    <input class="inputBlock" type="password" name="repPassword">
     <input class="buttom" type="submit">
 </form>
 
-<p>У меня еще нет <a href="/register.php">аккаунта</a></p>
+<p>Перейти на страницу <a href="index.php">входа</a></p>
 
 </body>
 </html>

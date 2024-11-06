@@ -3,7 +3,7 @@
     <div>Разница между текущей датой и датой рождения в днях <?=getDatesDiff('19.06.1994')?> </div>
 </footer>
 <?php
-if (str_ends_with($_SERVER['DOCUMENT_URI'], 'index.php')) {
+if (str_ends_with($_SERVER['DOCUMENT_URI'], 'main.php')) {
     echo getMainPageWordsCount();
 }
 ?>

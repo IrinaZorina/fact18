@@ -1,6 +1,6 @@
 <?php
 print_r($_GET);
-$l = $_GET['l']; 
+$l = $_GET['l'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -12,14 +12,19 @@ $l = $_GET['l'];
     <title>Document</title>
 </head>
 <body>
-<div><h2>Лаб4</h2></div>
-
-    <a href="1.php?l=<?=($l = 1)?>" title="переход">Lab1</a>
-
-    <a href="2.php?l=<?=($l = 2)?>" title="переход">Lab2</a>
-
-    <a href="3.php?l=<?=($l = 3)?>" title="переход">Lab3</a>
-
+<div><h2>Лаб</h2></div>
+<li>
+    <a href="1.php?l=<?=($l = 1)?>" >Lab1</a>
+</li>
+<li>
+    <a href="2.php?l=<?=($l = 2)?>" >Lab2</a>
+</li>
+<li>
+    <a href="3.php?l=<?=($l = 3)?>">Lab3</a>
+</li>
+<li>
+    <a href="4.php?l=<?=($l = 4)?>">Lab4</a>
+</li>
 
 </body>
 </html>

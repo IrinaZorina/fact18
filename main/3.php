@@ -13,15 +13,13 @@ $l = $_GET['l'];
 </head>
 <body>
 <div><h2>Лаб3</h2></div>
-<li>
-    <a href="1.php" title="переход">Lab1</a>
-</li>
-<li>
-    <a href="2.php" title="переход">Lab2</a>
-</li>
-<li>
-    <a href="4.php" title="переход">Lab4</a>
-</li>
+
+    <a href="1.php?l=<?=($l = 1)?>" title="переход">Lab1</a>
+
+    <a href="2.php?l=<?=($l = 2)?>" title="переход">Lab2</a>
+
+    <a href="4.php?l=<?=($l = 4)?>" title="переход">Lab4</a>
+
 
 </body>
 </html>

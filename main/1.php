@@ -12,15 +12,15 @@ $l = $_GET['l'];
     <title>Document</title>
 </head>
 <body>
-<div><h2><?php echo $l ?>Лаб1</h2></div>
+<div><h2>Лаб1</h2></div>
 <li>
-    <a href="2.php?l=<?=($l = 2);?>" title="переход">Lab2</a>
+    <a href="2.php?l=<?=($l = 2)?>" title="переход">Lab2</a>
 </li>
 <li>
-    <a href="3.php?l=<?=($l = 3);?>">Lab3</a>
+    <a href="3.php?l=<?=($l = 3)?>">Lab3</a>
 </li>
 <li>
-    <a href="4.php?l=<?=($l = 4);?>">Lab4</a>
+    <a href="4.php?l=<?=($l = 4)?>">Lab4</a>
 </li>
 
 </body>
