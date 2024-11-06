@@ -19,13 +19,13 @@ $string2 = file('file2.txt');
 
 $array=array_merge($string1,$string2);
 $res = array_diff($array, array_diff_assoc($array, array_unique($array)));
-file_put_contents("3.txt",$res);
+file_put_contents("file3.txt",$res);
 
 
 // задание 5
 
 $res2=array_intersect($string1,$string2);
-file_put_contents("4.txt",$res2);
+file_put_contents("file4.txt",$res2);
 
 
 
