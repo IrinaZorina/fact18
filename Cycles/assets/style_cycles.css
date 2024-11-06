@@ -1,0 +1,37 @@
+body {
+    background: linear-gradient(to left top, #0087facc, #ffea00);
+}
+h1{
+    font-size: 70px;
+    text-align: center;
+    vertical-align: center;
+}
+h2{
+    vertical-align: center;
+    padding: 20px;
+    margin: 1em 0 0;
+}
+.fractions, .task_1, .task_2, .task_3{
+    background-color: darksalmon;
+}
+.decision_fractions, .decision_task_1, .decision_task_2, .decision_task_3{
+    background-color: blanchedalmond;
+    font-size: 20px;
+    vertical-align: center;
+    text-align: center;
+    padding: 10px;
+}
+.decision_task_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.while, .for{
+    background-color: whitesmoke;
+    outline: black solid 1px;
+    padding: 10px;
+}
+.cycles_name{
+    font-weight: bold;
+    margin-top: 0;
+}
