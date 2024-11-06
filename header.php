@@ -34,12 +34,11 @@
                     <a href="cookiesession.php">COOKIE и SESSION</a>
                     <a href="tableM.html">Элемент из таблицы Менделеева</a>
                     <a href="Files.php">Работа с файлами</a>
+                    <a href="lab/lab.php">Лабораторная работа</a>
                 </ul>
                 <ul>
-                    <a href="#">VK</a>
-                    <a href="#">Google</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Telegram</a> 
+                    <a href="authorization/avform.php">Войти</a>
+                    <a href="authorization/registration.php">Регистрация</a>
                 </ul>
             </div>
         </nav>

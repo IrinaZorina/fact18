@@ -1,3 +1,6 @@
+<?php
+include_once 'incfunctions.php';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,7 +26,7 @@
 
 <section class="blockOne">
     <section class="one">
-        <div class="one"> Немного обо мне</div>
+        <div class="one"><?=getAboutMeText()?></div>
     </section>
     <section class="two">
         <div class="two"> <img src="assets/image/photo.jpg" width="384" , height="512" alt=""></div>
@@ -32,7 +35,7 @@
         <div class="three">Ситников Кирилл</div>
     </section>
     <section class="four">
-        <div class="four"><p>Мне понравился подход онлайн уроков с возможностью задавать вопросы и то что рассказывают на простом и понятном языке.</p></div>
+        <div class="four"><p><?=getAboutCourseText() ?></p></div>
     </section>
     <section class="five">
         <div class="five"><p>Привет! </p></div>

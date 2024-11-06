@@ -46,9 +46,11 @@ $minPositive = 0;
 $maxNegative = 0;
 foreach ($taskFourArr as $value){
     if($value > 0){
+        if($minPositive > $value)
         $minPositive = $value;
     }
     elseif ($value < 0){
+        if($maxNegative < $value)
         $maxNegative = $value;
     }
 }

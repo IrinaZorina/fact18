@@ -47,5 +47,3 @@ function taskThree($taskThreeValue1){
 echo taskThree($taskThreeValue1);
 ?>
 <br>
-
-<?php require_once 'footer.php'?>

@@ -219,7 +219,10 @@ table, td{
     width: auto;
     justify-content: space-between;
 }
-
+.headerItem{
+    display: inline-block;
+    margin: 0px 0px 0px 50px;
+}
 /*header.php*/
 
 
