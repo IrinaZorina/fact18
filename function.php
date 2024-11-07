@@ -14,7 +14,7 @@ function ten($dec)
  }
 
 }
-ten(10);
+ten(1);
 
 ?>
     <div class="title"><h1>Слайд №16</h1></div>

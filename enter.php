@@ -3,38 +3,17 @@
 <?php
 $my_log='test';
 $my_pass='098f6bcd4621d373cade4e832627b4f6';
+$logih_f=isset($_POST['login_in'])?$_POST['login_in']: null;
+$pass=isset($_POST['password_in'])?$_POST['password_in']=md5($_POST['password_in']):null;
 setcookie('b_color', isset($_GET['color']) ? $_GET['color'] : '', time() + 3600);
-$hostname="localhost";
-$username="Tatiana";
-$password="Tatiana";
-$dbname="registration";
-$db_con=mysqli_connect($hostname, $username, $password, $dbname);
-mysqli_set_charset($db_con,"utf8");
-$login1=isset($_POST['login_in'])?$_POST['login_in']: null;
-$password1=isset($_POST['password_in'])?$_POST['password_in']=md5($_POST['password_in']):null;
-$select=mysqli_query(($db_con),"SELECT * FROM reg
-Where login='$login1' AND password='$password1'");
-$arr_select=mysqli_fetch_all($select, MYSQLI_ASSOC);
-//$insert=mysqli_query($db_con,"INSERT INTO reg ('id', 'login', 'password') VALUES (null, $login, $password)");
-if(empty($arr_select) && $login1<>null){
-    $link=null;
-    $error= "логин или пароль указаны неверно";
-}
-else if (empty($arr_select) && $login1==null){
-    $link=null;
-    $error= '';
-}
-else{
-    $link='in.php';
-    //setcookie('time', date("Y-m-d H:i:s"), time() + 3600);
-    // setcookie('login', isset($_POST['login_in']) ? $_POST['login_in'] : '', time() + 3600);
-    setcookie('in', isset($_COOKIE['in']) ? $_COOKIE['in'] = $_COOKIE['in'] + 1 : 1, time() + 3600);
-    $_SESSION['time'] = date("Y-m-d H:i:s");
-    $_SESSION['login'] =isset($_POST['login_in'])?$_POST['login_in']: null;
-    setcookie('b_color', isset($_GET['color']) ? $_GET['color'] : '', time() + 3600);
-    $error='';
-    //$arr_select[]=null;
-}
+include 'Authorization.php';
+$authorization1=new Authorization($logih_f);
+//$authorization1->login_a=isset($_POST['login_in'])?$_POST['login_in']: null;
+$authorization1->password_a=isset($_POST['password_in'])?$_POST['password_in']=md5($_POST['password_in']):null;
+$select_new=$authorization1->logins_array();
+$password=$authorization1->password($logih_f, $pass,$select_new);
+//print_r($select_new);
+//print_r($password);
 ?>
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
@@ -64,14 +43,14 @@ else{
 <h2>Если вы уже зарегистрированы на сайте, <br>введите логин и пароль</h2>
 <p> (логин: test/пароль: test)</p>
 
-<div class="ava"> <form action="<?header('Location: ' . $link); echo $link;?>" method="post">
+<div class="ava"> <form action="<?header('Location: ' . $password[0][0]); echo $password[0][0];?>" method="post">
         <p> Логин  <input type="text" name="login_in" required></p>
         <p> Пароль <input type="password" name="password_in" required></p>
         <input type="submit">
     </form></div>
 <h2><a href="reg.php"><button>регистрация</button></a></h2>
 
-<h2><?php echo $error;?></h2>
+<h2><?php echo $password[0][1];?></h2>
 </body>
 </html>
 
