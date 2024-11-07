@@ -24,7 +24,7 @@ if ($time > 20 || $time < 8) {
 <body <?php echo isset($_COOKIE['b_color'])?'style="background-color:' . $_COOKIE['b_color'].'"':'class=time';?>>
 <header>
     <nav class="container_nav">
-        <a href="../index_my.php" target="_blank" class="text_nav"><b>О себе</b></a>
+        <a href="../index.php" target="_blank" class="text_nav"><b>О себе</b></a>
         <a href="../cycle.php" target="_blank" class="text_nav"><b>Циклы</b></a>
         <a href="../array.php" target="_blank" class="text_nav"><b>Массивы</b></a>
         <a href="../string.php" target="_blank" class="text_nav"><b>Строки</b></a>

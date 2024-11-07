@@ -8,7 +8,6 @@ $arr_select[] = null;
 $login_reg = isset($_POST['login_in_reg']) ? $_POST['login_in_reg'] : null;
 $password_reg = isset($_POST['password_in_reg']) ? $_POST['password_in_reg'] = md5($_POST['password_in_reg']) : null;
 include 'Authorization.php';
-//include 'Registration.php';
 $authorization2=new Authorization($login_reg);
 $select_r=$authorization2->logins_array();
 $reg=$authorization2->reg($login_reg, $password_reg, $select_r);
