@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(to left top, #0087facc, #ffea00);
+}
+h1{
+    font-size: 70px;
+    text-align: center;
+    vertical-align: center;
+}
+h2{
+    vertical-align: center;
+    padding: 20px;
+    margin: 1em 0 0;
+}
+.massivs_task_4, .massivs_task_5, .massivs_task_6, .massivs_task_7{
+    background-color: darksalmon;
+}
+.solution_massivs_task_4, .solution_massivs_task_5, .solution_massivs_task_6, .solution_massivs_task_7{
+    background-color: blanchedalmond;
+    font-size: 20px;
+    vertical-align: center;
+    text-align: center;
+    padding: 10px;
+}

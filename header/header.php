@@ -8,4 +8,7 @@
     <div class="cycles">
         <a href="http://potysevsite/Cycles/cycles.php" class="cycles_text">Циклы</a>
     </div>
+    <div class="massive">
+        <a href="http://potysevsite/Massivs/massivs.php" class="massive_text">Массивы</a>
+    </div>
 </header>
