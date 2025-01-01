@@ -37,12 +37,21 @@ body{
 
     row-gap: 20px;
 }
+.about_myself_color{
+    color: #fafafa;
+}
 .about_myself, .review{
     background-color: darksalmon;
     width: 45%;
     padding: 10px;
     text-align: left;
     font-size: 1.5em;
+}
+.reviewEvenNumber{
+    color: red;
+}
+.reviewOddNumber{
+    color: yellow;
 }
 .fio_text{
     color: whitesmoke;

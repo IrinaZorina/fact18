@@ -1,10 +1,11 @@
 <?php
-$time = date( format:"G");
-if ($time >= 18 || $time < 9){
-    $theme = "Portfolio/assets/css/style_night.css";
-}
-else{
-    $theme = "Portfolio/assets/css/style.css";
+function changingTheTheme(){
+    $time = date(format: "G");
+    if ($time >= 18 || $time < 9) {
+        return "Portfolio/assets/css/style_night.css";
+    } else {
+        return "Portfolio/assets/css/style.css";
+    }
 }
 ?>
 
@@ -13,7 +14,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="<?php echo $theme; ?>">
+    <link rel="stylesheet" href="<?php echo $theme = changingTheTheme(); ?>">
     <link rel="stylesheet" href="header/assets/header_style.css">
     <link rel="stylesheet" href="footer/assets/footer_style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,18 +36,37 @@ include_once "header/header.php";
             </div>
             <div class="blocks_text">
                 <div class="about_myself">
-                    Работаю более года в ООО "Автор IT".
-                        Моя основная работа заключается в внедрение и настройке Битрикс24 для различных клиентов,
+                    <?php
+                    echo '<div class="about_myself_color">Работаю более года в ООО "Автор IT".</div>';
+                    ?>
+                        Моя основная работа заключается во внедрение и настройке Битрикс24 для различных клиентов,
                         помогая им повысить эффективность в бизнесе.<br>
-                    Мое хобби - катание на эндуро-мотоцикле. Это помогаетмне отдохнуть от повседневной рутины,
+                    Мое хобби - катание на эндуро-мотоцикле. Это помогает мне отдохнуть от повседневной рутины,
                         получить заряд энергии и свежих впечатлений.<br>
                     Я всегда стремлюсь к покорению новых вершин для прокачки своих скилов.
                 </div>
                 <div class="review">
-                    Информация подается в доступной для восприятия форме.
+                    <?php
+                    $review = 'Информация подается в доступной для восприятия форме.
                         С введением новых терминов и элементов, их работа показывается на практике.<br>
                     Очень хорошо чувствуется профессионализм преподавательского состава.<br>
-                    Очень рад, что оказался именно на вашем курсе.
+                    Очень рад, что оказался именно на вашем курсе.';
+
+                    $review = strip_tags($review);
+                    $reviewArray = preg_split('/\s+/', $review);
+
+                    for ($i = 0; $i < count($reviewArray); $i++){
+                        if ($i % 2 == 1){
+                            $reviewArray[$i] = '<span class="reviewEvenNumber">' . htmlspecialchars($reviewArray[$i]) . '</span>';
+                        }
+                        else{
+                            $reviewArray[$i] = '<span class="reviewOddNumber">' . htmlspecialchars($reviewArray[$i]) . '</span>';
+
+                        }
+                    }
+                    $reviewEvenNumberColor = implode(' ', $reviewArray);
+                    echo $reviewEvenNumberColor;
+                    ?>
                 </div>
             </div>
 
@@ -99,6 +119,63 @@ include_once "header/header.php";
 </main>
 <?php
 include_once "footer/footer.php";
+function processContent($content) {
+
+    $content = strtolower($content);
+
+    $vowels = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'];
+    $vowelsCount = countVowels($content, $vowels);
+
+    $wordsCount = countWords($content);
+
+    $dateOfFoundation = date_create('11-09-2024');
+    $dateServer = date_create();
+    $interval = date_diff($dateOfFoundation, $dateServer);
+
+    echo "Количество гласных букв на странице: " . $vowelsCount . '<br>';
+    echo "Количество слов: " . $wordsCount . '<br>';
+    echo $dateOfFoundation->format('Дата создания сайта: d.m.Y') . '<br>';
+    echo $dateServer->format('Сегодня: d.m.Y') . '<br>';
+    echo $interval->format('С открытия сайта прошло %a дней') . '<br>';
+}
+
+function countVowels($content, $vowels) {
+    $vowelsCount = 0;
+    foreach ($vowels as $vowel) {
+        $vowelsCount += mb_substr_count($content, $vowel);
+    }
+    return $vowelsCount;
+}
+
+function countWords($content) {
+    $numberOfWords = preg_replace("/[[:punct:]]/", '', $content);
+    $numberOfWords = mb_ereg_replace('[\s]+', ' ', $numberOfWords);
+    $words = explode(' ', $numberOfWords);
+    return count($words);
+}
+
+$content = 'Потысьев Константин Игоревич Работаю более года в ООО "Автор IT".
+Моя основная работа заключается в внедрение и настройке Битрикс24 для различных клиентов,
+помогая им повысить эффективность в бизнесе.
+Мое хобби - катание на эндуро-мотоцикле. Это помогает мне отдохнуть от повседневной рутины,
+получить заряд энергии и свежих впечатлений.
+Я всегда стремлюсь к покорению новых вершин для прокачки своих скилов. Информация подается в доступной для восприятия форме.
+С введением новых терминов и элементов, их работа показывается на практике.
+Очень хорошо чувствуется профессионализм преподавательского состава.
+Очень рад, что оказался именно на вашем курсе.
+Основная четверка авиационных конструкторских бюро СССР
+ОКБ А.Н. Туполева основано 22 октября 1922 года
+ОКБ С.В. Ильюшина основано 13 января 1933 года
+ОКБ П.О. Сухого основано 29 июля 1939 года
+ОКБ А.И. Микояна и М.И. Гуревича
+основано 8 декабря 1939 года
+Малоизвестные летательные аппараты
+Ту-144
+МиГ-8
+Су-31
+Ил-103';
+
+processContent($content);
 ?>
 </body>
 </html>

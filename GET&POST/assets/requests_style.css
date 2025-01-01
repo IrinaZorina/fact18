@@ -1,0 +1,23 @@
+body {
+    background: linear-gradient(to left top, #0087facc, #ffea00);
+}
+h1{
+    font-size: 70px;
+    text-align: center;
+    vertical-align: center;
+}
+h2{
+    vertical-align: center;
+    padding: 20px;
+    margin: 1em 0 0;
+}
+.GandP_task_1, .GandP_task_2, .GandP_task_3, .GandP_task_4{
+    background-color: darksalmon;
+}
+.solution_GandP_task_1, .solution_GandP_task_2, .solution_GandP_task_3, .solution_GandP_task_4{
+    background-color: blanchedalmond;
+    font-size: 20px;
+    vertical-align: center;
+    text-align: center;
+    padding: 10px;
+}

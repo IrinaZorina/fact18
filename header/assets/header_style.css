@@ -1,5 +1,5 @@
 header{
-    height: 90px;
+    height: 75px;
     display: flex;
     justify-content: space-between;
 }
@@ -8,7 +8,7 @@ header{
     width: 70px;
     background-image: url("image/Airplane.png");
 }
-.argon, .cycles, .massive{
+.argon, .cycles, .massive, .lines, .functions, .request, .entry{
     background-color: #fafafa;
     height: 70px;
     width: 110px;
@@ -19,4 +19,11 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+a{
+    text-decoration: none;
+    text-decoration: #fafafa;
+}
+.entry{
+    background: rgb(255, 56, 56);
 }
