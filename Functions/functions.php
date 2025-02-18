@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/functions_style.css">
     <link rel="stylesheet" href="../header/assets/header_style.css">
     <link rel="stylesheet" href="../footer/assets/footer_style.css">
-    <title>Lines</title>
+    <title>Functions</title>
 </head>
 <body>
 <?php

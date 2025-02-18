@@ -1,4 +1,5 @@
 <?php
+session_start();
 function changingTheTheme(){
     $time = date(format: "G");
     if ($time >= 18 || $time < 9) {
@@ -18,6 +19,7 @@ function changingTheTheme(){
     <link rel="stylesheet" href="header/assets/header_style.css">
     <link rel="stylesheet" href="footer/assets/footer_style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>

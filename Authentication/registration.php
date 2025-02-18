@@ -1,32 +1,55 @@
 <?php
 session_start();
 
-$BDFile = 'users.txt';
-$authErr = $regErr = '';
+// Подключение к базе данных
+$servername = "localhost";
+$username = "fact18";
+$password = "fact18";
+$dbname = "MySite";
 
-if (!file_exists($BDFile)){
-    file_put_contents($BDFile, '');
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Проверка подключения
+if ($conn->connect_error) {
+    die("Ошибка подключения: " . $conn->connect_error);
 }
-//Регистрация
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
-    $username = trim($_POST['new_username']);
-    $password = trim($_POST['new_password']);
 
-    $users = file($BDFile, FILE_IGNORE_NEW_LINES);
-    foreach ($users as $user) {
-        list($fileUsername,) = explode(':', $user);
-        if ($fileUsername === $username) {
-            $regErr = "Пользователь с таким логином уже существует!";
-            break;
+$regErr = "";
+
+// Проверка, была ли форма отправлена
+if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
+    $new_username = $_POST['new_username'];
+    $new_password = $_POST['new_password'];
+
+    // Проверка на существование пользователя с таким же логином
+    $checkUserQuery = "SELECT * FROM users WHERE login=?";
+    $stmt = $conn->prepare($checkUserQuery);
+    $stmt->bind_param("s", $new_username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $regErr = "Пользователь с таким логином уже существует.";
+    } else {
+        // Хэширование пароля
+        $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+
+        // Вставка нового пользователя в базу данных
+        $insertQuery = "INSERT INTO users (login, password) VALUES (?, ?)";
+        $stmt = $conn->prepare($insertQuery);
+        $stmt->bind_param("ss", $new_username, $hashed_password);
+
+        if ($stmt->execute()) {
+            echo "Регистрация прошла успешно. Можете войти.";
+        } else {
+            $regErr = "Ошибка при регистрации, попробуйте снова.";
         }
     }
-    if (empty($regErr)){
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        file_put_contents($BDFile, "$username:$hashedPassword\n", FILE_APPEND);
-        header("Location: authorization.php");
-        exit();
-    }
+
+    $stmt->close();
 }
+
+$conn->close();
 ?>
 
 <!doctype html>
@@ -36,11 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet", href="assets/form_style.css">
-    <title>Регестрация</title>
+    <link rel="stylesheet" href="assets/form_style.css">
+    <title>Registration</title>
 </head>
 <body>
-
 <form method="post">
     <h1>Регистрация</h1><br>
     <input type="text" name="new_username" placeholder="Логин" required>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/massiv_style.css">
     <link rel="stylesheet" href="../header/assets/header_style.css">
     <link rel="stylesheet" href="../footer/assets/footer_style.css">
-    <title>Document</title>
+    <title>Massivs</title>
 </head>
 <body>
 <?php

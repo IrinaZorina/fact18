@@ -8,8 +8,5 @@
             <div class="vk"><a href="https://vk.com/konstantinpotysev">VK</a></div>
             <div class="telegram"><a href="https://t.me/Konstantinpotysev">Telegram</a></div>
         </div>
-        <?php
-        include_once 'vowelСounter.php'
-        ?>
     </div>
 </footer>
